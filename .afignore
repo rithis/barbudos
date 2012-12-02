@@ -7,5 +7,5 @@ dist/
 temp/
 test/
 *
-!barbudos.js
+!backend.js
 !package.json

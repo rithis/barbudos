@@ -9,6 +9,6 @@
         "grunt-rsync": "*"
     },
     "scripts": {
-        "start": "node barbudos.js"
+        "start": "node backend.js"
     }
 }

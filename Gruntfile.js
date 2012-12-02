@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 
     grunt.renameTask('server', 'yeoman:server');
     grunt.registerTask('server', function () {
-        require('./barbudos');
+        require('./backend');
         grunt.task.run('yeoman:server');
     });
 
