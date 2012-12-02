@@ -1,4 +1,6 @@
-*.css
 .idea
 .sass-cache
+components
+dist
 node_modules
+temp

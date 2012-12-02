@@ -1,6 +1,6 @@
 'use strict';
 
-barbudosApp.controller('DishesCtrl', function ($scope, Dish) {
+barbudosApp.controller('DishesCtrl', ['$scope', 'Dish', function ($scope, Dish) {
     $scope.dishes = Dish.query();
 
     $scope.submit = function () {
@@ -11,4 +11,4 @@ barbudosApp.controller('DishesCtrl', function ($scope, Dish) {
             $scope.dish = {};
         });
     };
-});
+}]);

@@ -1,13 +1,12 @@
 {
     "name": "rithis-barbudos",
     "description": "bar-barbudos.ru",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
     "dependencies": {
         "restify": "1.4.x",
         "mongoose": "3.4.x",
-        "connect": "*",
-        "watch": "*"
+        "grunt-rsync": "*"
     },
     "scripts": {
         "start": "node barbudos.js"
