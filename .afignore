@@ -1,0 +1,11 @@
+.git/
+.idea/
+.sass-cache/
+app/
+components/
+dist/
+temp/
+test/
+*
+!barbudos.js
+!package.json
