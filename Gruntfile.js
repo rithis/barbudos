@@ -123,6 +123,12 @@ module.exports = function (grunt) {
         });
     });
 
+    grunt.renameTask('server', 'yeoman:server');
+    grunt.registerTask('server', function () {
+        require('./barbudos');
+        grunt.task.run('yeoman:server');
+    });
+
     grunt.loadNpmTasks("grunt-rsync");
 
     grunt.registerTask('deploy', 'build rsync');
