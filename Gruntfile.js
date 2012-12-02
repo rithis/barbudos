@@ -107,7 +107,7 @@ module.exports = function (grunt) {
         },
         rsync: {
             "deploy-staging": {
-                src: "dist",
+                src: "dist/",
                 dest: "/var/www/bar-barbudos.ru",
                 host: "www-data@static.rithis.com",
                 recursive: true
