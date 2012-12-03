@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="styles/mockup.css"/>
+<link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+
+<div class="row">
+    <div class="span9">
+        <div class="pull-left header-image hidden-phone">
+            <img src="http://placehold.it/350x150">
+        </div>
+
+        <ul class="nav nav-pills nav-main">
+            <li class="active">
+                <a href="#/mockup/index">Доставка</a>
+            </li>
+            <li><a href="#/mockup/index">Кафе-бар</a></li>
+            <li class="visible-phone"><a href="#/mockup/index">Корзина</a></li>
+        </ul>
+
+        <hr>
+
+        <ul class="nav nav-pills nav-categories">
+            <li><a href="#/mockup/index">Первое</a></li>
+            <li class="active"><a href="#/mockup/index">Второе</a></li>
+            <li><a href="#/mockup/index">Третье</a></li>
+            <li><a href="#/mockup/index">Десерт</a></li>
+            <li><a href="#/mockup/index">Компот</a></li>
+        </ul>
+
+        <div class="row-fluid">
+            <ul class="thumbnails">
+                <li class="dish" ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/245x245">
+
+                        <h2>Мясо</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget posuere elit. Nam non
+                            tortor velit, vel vehicula nulla.</p>
+
+                        <form>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="icon-shopping-cart"></i> 220 руб.
+                            </button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <p>Подвал</p>
+
+    </div>
+    <div class="span3 hidden-phone">
+        <div class="well cart">
+            <h3>Корзина</h3>
+
+            <div class="cart-dish" ng-repeat="i in [0, 1, 2]">
+                <img src="http://placehold.it/245x245">
+
+                <h3>Мясо</h3>
+
+                <form class="clearfix">
+                    <div class="btn-group btn-group-vertical pull-left">
+                        <button type="submit" class="btn"><i class="icon-plus"></i></button>
+                        <button type="submit" class="btn"><i class="icon-minus"></i></button>
+                    </div>
+
+                    <p>220 руб.<br><b>x</b> 20 шт.<br><b>=</b> 4 400 руб.</p>
+                </form>
+            </div>
+
+            <p>
+                <button class="btn btn-primary btn-large">Сделать заказ на <b>13 200</b>&nbsp;руб.</button>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+@import "../components/bootstrap-sass/lib/variables";
+@import "../components/bootstrap-sass/lib/mixins";
+
+
+.row-fluid {
+  ul.thumbnails {
+    li.span12 + li { margin-left : 0px; }
+    li.span6:nth-child(2n + 3) { margin-left : 0px; }
+    li.span4:nth-child(3n + 4) { margin-left : 0px; }
+    li.span3:nth-child(4n + 5) { margin-left : 0px; }
+    li.span2:nth-child(6n + 7) { margin-left : 0px; }
+    li.span1:nth-child(12n + 13) { margin-left : 0px; }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}
+
+
+.header-image {
+  margin-right: 20px;
+}
+
+
+.nav-main {
+  margin-top: (150px/2 - 34px/2);
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .nav-main {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid $grayLight;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .nav-categories {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid $grayLight;
+  }
+}
+
+
+.dish:first-child {
+  margin-left: 0;
+}
+
+@media (min-width: 1200px) {
+  .dish {
+    width: 195px;
+
+    &:nth-child(4n + 5) { margin-left : 0px; }
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+  .dish {
+    width: 220px;
+
+    &:nth-child(3n + 4) { margin-left : 0px; }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .dish {
+    width: 255px;
+
+    &:nth-child(2n + 3) { margin-left : 0px; }
+  }
+}
+
+@media (max-width: 767px) {
+  .dish {
+    .thumbnail {
+      @include clearfix;
+
+      img {
+        float: left;
+        width: 190px;
+        margin-right: 10px;
+      }
+
+      button {
+        width: auto;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dish .thumbnail img {
+    width: 100px;
+  }
+}
+
+
+.cart {
+  .btn-large b {
+    white-space: nowrap;
+  }
+
+  .cart-dish {
+    img {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      position: absolute;
+      margin: 0;
+      margin-top: -50px;
+      padding: 0 10px;
+      background: white;
+    }
+
+    .btn-group {
+      margin-right: 10px;
+    }
+  }
+}

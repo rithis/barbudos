@@ -12,6 +12,10 @@ barbudosApp.config(['$routeProvider', function ($routeProvider) {
         controller: 'DishesCtrl'
     });
 
+    $routeProvider.when('/mockup/index', {
+        templateUrl: 'views/mockup/index.html'
+    });
+
     $routeProvider.otherwise({
         redirectTo: '/'
     });
