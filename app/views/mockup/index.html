@@ -1,35 +1,35 @@
 <link rel="stylesheet" href="styles/mockup.css"/>
 <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
 
-<div class="row">
+<div class="row index-page">
     <div class="span9">
         <div class="pull-left header-image hidden-phone">
-            <img src="http://placehold.it/350x150">
+            <img src="http://lorempixel.com/output/abstract-q-g-350-150-10.jpg">
         </div>
 
         <ul class="nav nav-pills nav-main">
             <li class="active">
-                <a href="#/mockup/index">Доставка</a>
+                <a href="#!/mockup/index">Доставка</a>
             </li>
-            <li><a href="#/mockup/index">Кафе-бар</a></li>
-            <li class="visible-phone"><a href="#/mockup/index">Корзина</a></li>
+            <li><a href="#!/mockup/about">Кафе-бар</a></li>
+            <li class="visible-phone"><a href="#!/mockup/order">Ваш заказ (4)</a></li>
         </ul>
 
         <hr>
 
         <ul class="nav nav-pills nav-categories">
-            <li><a href="#/mockup/index">Первое</a></li>
-            <li class="active"><a href="#/mockup/index">Второе</a></li>
-            <li><a href="#/mockup/index">Третье</a></li>
-            <li><a href="#/mockup/index">Десерт</a></li>
-            <li><a href="#/mockup/index">Компот</a></li>
+            <li><a href="#!/mockup/index">Первое</a></li>
+            <li class="active"><a href="#!/mockup/index">Второе</a></li>
+            <li><a href="#!/mockup/index">Третье</a></li>
+            <li><a href="#!/mockup/index">Десерт</a></li>
+            <li><a href="#!/mockup/index">Компот</a></li>
         </ul>
 
         <div class="row-fluid">
             <ul class="thumbnails">
                 <li class="dish" ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/245x245">
+                        <img src="http://lorempixel.com/output/food-q-g-245-245-3.jpg">
 
                         <h2>Мясо</h2>
 
@@ -53,10 +53,10 @@
     </div>
     <div class="span3 hidden-phone">
         <div class="well cart">
-            <h3>Корзина</h3>
+            <h3>Ваш заказ</h3>
 
             <div class="cart-dish" ng-repeat="i in [0, 1, 2]">
-                <img src="http://placehold.it/245x245">
+                <img src="http://lorempixel.com/output/food-q-g-245-245-3.jpg">
 
                 <h3>Мясо</h3>
 
@@ -71,7 +71,7 @@
             </div>
 
             <p>
-                <button class="btn btn-primary btn-large">Сделать заказ на <b>13 200</b>&nbsp;руб.</button>
+                <a href="#!/mockup/order" class="btn btn-primary btn-large">Сделать заказ на <b>13 200</b>&nbsp;руб.</a>
             </p>
         </div>
     </div>
