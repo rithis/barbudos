@@ -1,5 +1,7 @@
+.c9revisions
 .idea
 .sass-cache
+.settings
 components
 dist
 node_modules
