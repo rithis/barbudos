@@ -4,7 +4,7 @@
     "version": "0.0.2",
     "private": true,
     "dependencies": {
-        "restify": "1.4.x",
+        "restify": "2.0.x",
         "mongoose": "3.4.x",
         "grunt-rsync": "*"
     },

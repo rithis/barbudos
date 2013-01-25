@@ -64,6 +64,8 @@ var postAction = function (Model) {
 var server = restify.createServer();
 
 server.use(restify.bodyParser({ mapParams: false }));
+server.use(restify.jsonp());
+
 server.get('/dishes', listAction(Dish));
 server.post('/dishes', postAction(Dish));
 
