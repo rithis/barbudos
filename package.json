@@ -7,7 +7,8 @@
         "restify": "2.0.x",
         "mongoose": "3.4.x",
         "grunt-rsync": "*",
-        "qs": "0.5.x"
+        "qs": "0.5.x",
+        "grunt-contrib-stylus": "*"
     },
     "scripts": {
         "start": "node backend.js"

@@ -16,14 +16,15 @@ module.exports = function (grunt) {
                 bare: true
             }
         },
-        compass: {
-            dist: {
+        stylus: {
+            compile: {
                 options: {
-                    css_dir: 'temp/styles',
-                    sass_dir: 'app/styles',
-                    images_dir: 'app/images',
-                    javascripts_dir: 'temp/scripts',
-                    force: true
+                    'include css': true,
+                    paths: ['node_modules/grunt-contrib-stylus/node_modules']
+                },
+      
+                files: {
+                    'app/styles/*.css': ['app/styles/*.styl']
                 }
             }
         },
@@ -35,11 +36,11 @@ module.exports = function (grunt) {
                 files: 'app/scripts/**/*.coffee',
                 tasks: 'coffee reload'
             },
-            compass: {
+            stylus: {
                 files: [
-                    'app/styles/**/*.scss'
+                    'app/styles/**/*.styl'
                 ],
-                tasks: 'compass reload'
+                tasks: 'stylus reload'
             },
             reload: {
                 files: [
@@ -117,6 +118,9 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.registerTask('compass', ['stylus']);
 
     grunt.registerTask('test', 'run the testacular test driver', function () {
         var done = this.async();

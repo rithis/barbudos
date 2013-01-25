@@ -8,3 +8,4 @@ node_modules
 temp
 app/scripts/*.js
 app/scripts/*/*.js
+app/styles/*.css
