@@ -2,6 +2,8 @@
 var restify = require('restify'),
     mongoose = require('mongoose'),
     util = require('util');
+var methodOverride = require('./restify-method-override'),
+    cors = require('./restify-method-override');
 
 
 // db
@@ -63,8 +65,15 @@ var postAction = function (Model) {
 // server
 var server = restify.createServer();
 
+server.pre(methodOverride());
 server.use(restify.bodyParser({ mapParams: false }));
 server.use(restify.jsonp());
+server.use(cors(['http://bar-barbudos.ru', 'http://barbudos.rithis.com', 'http://localhost:3501']));
+
+server.opts(/^/, function (req, res, next) {
+    res.send(200);
+    next();
+});
 
 server.get('/dishes', listAction(Dish));
 server.post('/dishes', postAction(Dish));

@@ -6,7 +6,8 @@
     "dependencies": {
         "restify": "2.0.x",
         "mongoose": "3.4.x",
-        "grunt-rsync": "*"
+        "grunt-rsync": "*",
+        "qs": "0.5.x"
     },
     "scripts": {
         "start": "node backend.js"
