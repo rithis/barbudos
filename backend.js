@@ -50,7 +50,7 @@ var listAction = function (Model) {
 
 var postAction = function (Model) {
     return function (req, res, next) {
-        (new Model(req.body)).save(function (err, document) {
+        (new Model(req.query)).save(function (err, document) {
             if (err) {
                 return next(err);
             }

@@ -5,8 +5,8 @@ barbudosApp.controller 'DishesCtrl', ['$scope', 'Dish', ($scope, Dish) ->
     
     $scope.submit = ->
         dish = new Dish $scope.dish
-        
-        dish.$save ->
+
+        dish.$save $scope.dish, ->
             $scope.dishes.push dish
             $scope.dish = {}
 ]
