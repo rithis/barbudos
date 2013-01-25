@@ -7,21 +7,25 @@ var methodOverride = require('./restify-method-override'),
 
 
 // db
-var db;
+var connectionString;
 if (process.env.VCAP_SERVICES) {
     var env = JSON.parse(process.env.VCAP_SERVICES);
     var mongo = env['mongodb-1.8'][0]['credentials'];
 
-    db = mongoose.createConnection(util.format('mongodb://%s:%s@%s:%d/%s',
+    connectionString = util.format(
+        'mongodb://%s:%s@%s:%d/%s',
         mongo.username,
         mongo.password,
         mongo.hostname,
         mongo.port,
         mongo.db
-    ))
+    );
+} else if (process.env.MONGODB_URI) {
+    connectionString = process.env.MONGODB_URI;
 } else {
-    db = mongoose.createConnection('mongodb://localhost/barbudos')
+    connectionString = 'mongodb://localhost/barbudos';
 }
+var db = mongoose.createConnection(connectionString);
 
 
 // models

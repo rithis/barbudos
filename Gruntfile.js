@@ -122,9 +122,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.registerTask('compass', ['stylus']);
 
-    grunt.registerTask('test', 'run the testacular test driver', function () {
+    grunt.registerTask('test', 'run the cucumber', function () {
         var done = this.async();
-        require('child_process').exec('testacular start', function (err, stdout) {
+        require('child_process').exec('node_modules/.bin/cucumber.js', function (err, stdout) {
             grunt.log.write(stdout);
             done(err);
         });

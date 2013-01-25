@@ -2,7 +2,7 @@
 
 ## Installation
 
-Project requires `yeoman` to be installed.
+Project requires `yeoman` and `phantomjs` to be installed.
 
 ```
 npm install -g yeoman
