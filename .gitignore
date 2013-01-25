@@ -6,3 +6,5 @@ components
 dist
 node_modules
 temp
+app/scripts/*.js
+app/scripts/*/*.js

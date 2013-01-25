@@ -11,6 +11,9 @@ module.exports = function (grunt) {
                     'app/scripts/*.js': 'app/scripts/**/*.coffee',
                     'test/spec/*.js': 'test/spec/**/*.coffee'
                 }
+            },
+            options: {
+                bare: true
             }
         },
         compass: {
