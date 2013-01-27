@@ -2,10 +2,7 @@
 
 ## Installation
 
-Project requires `yeoman` and `phantomjs` to be installed.
-
 ```
-npm install -g yeoman
 git clone git@github.com:rithis/barbudos.git
 cd barbudos
 npm install
@@ -13,20 +10,14 @@ npm install
 
 ## Commands
 
-Run backend and frontend servers:
+Run server:
 
 ```
-yeoman server
+npm start
 ```
 
 Run tests:
 
 ```
-yeoman test
-```
-
-Build project and sync with remote server:
-
-```
-yeoman deploy
+npm test
 ```

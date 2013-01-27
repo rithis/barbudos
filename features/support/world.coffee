@@ -1,18 +1,16 @@
 mongoose = require 'mongoose'
-connect = require 'connect'
 zombie = require 'zombie'
 async = require 'async'
-fork = require('child_process').fork
-exec = require('child_process').exec
+spawn = require('child_process').spawn
 http = require 'http'
 
 
-MONGODB_URI = 'mongodb://localhost/barbudos-test'
+MONGOHQ_URL = 'mongodb://localhost/barbudos-test'
 
 
 exports.World = (callback) ->
     browser = new zombie.Browser()
-    db = mongoose.createConnection(MONGODB_URI).db
+    db = mongoose.createConnection(MONGOHQ_URL).db
 
     world =
         visit: (url, callback) ->
@@ -29,31 +27,13 @@ exports.World = (callback) ->
             db.collection collection, (err, collection) ->
                 async.map documents, collection.insert.bind(collection), callback
 
-    setup = [
-        # build application
-        (callback) ->
-            exec 'yeoman build', ->
-                callback()
 
-        # spawn backend
-        (callback) ->
-            backend = fork 'backend', env: MONGODB_URI: MONGODB_URI
-            
-            process.on 'exit', ->
-                backend.kill()
+    env = PATH: process.env.PATH, MONGOHQ_URL: MONGOHQ_URL
+    backend = spawn 'node_modules/.bin/coffee', ['barbudos.coffee'], env: env
 
-            # wait a second for setup
-            setTimeout callback, 1000
-
-        # serve application
-        (callback) ->
-            app = connect()
-            app.use connect.static 'dist'
-
-            server = http.createServer app
-            server.listen 3501, ->
-                callback()
-    ]
-
-    async.waterfall setup, ->
+    # callback when backend prints "Server listening port 3000"
+    backend.stdout.once 'data', ->
         callback world
+
+    process.on 'exit', ->
+        backend.kill()
