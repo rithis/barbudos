@@ -1,5 +1,5 @@
-'use strict';
+dishesServices = angular.module 'dishesServices', ['ngResource']
 
-angular.module('dishesServices', ['ngResource']).factory 'Dish', ['$resource', ($resource) ->
-    $resource('/dishes/:dishId')
+dishesServices.factory 'Dish', ['$resource', ($resource) ->
+    $resource '/dishes/:dishId'
 ]
