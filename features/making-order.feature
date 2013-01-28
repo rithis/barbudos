@@ -1,8 +1,10 @@
+@backend @browser
 Feature: Making Order
     In order to fill my stomach
     As a customer
     I want to make an order
 
+    @db
     Scenario: Choice some dishes
         Given collection "dishes":
             | name   | price |

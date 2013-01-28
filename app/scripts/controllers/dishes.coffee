@@ -1,5 +1,3 @@
-'use strict';
-
 barbudosApp.controller 'DishesCtrl', ['$scope', 'Dish', ($scope, Dish) ->
     $scope.dishes = Dish.query()
     

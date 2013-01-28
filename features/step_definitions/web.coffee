@@ -6,6 +6,6 @@ module.exports = ->
 
     this.Then /^I should see "([^"]*)" on the page$/, (text, callback) ->
         unless this.checkPageContainsText(text)
-            callback.fail new Error "Page doesn't contains text"
+            callback.fail new Error "Page doesn't contains text '#{text}'"
         else
             callback()
