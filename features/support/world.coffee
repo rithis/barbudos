@@ -2,6 +2,7 @@ mongoose = require 'mongoose'
 zombie = require 'zombie'
 async = require 'async'
 spawn = require('child_process').spawn
+exec = require('child_process').exec
 
 
 MONGOHQ_URL = 'mongodb://localhost/barbudos-test'
@@ -12,6 +13,7 @@ exports.World = (callback) ->
     backend = null
     browser = null
     connection = null
+    coffeelintSuccess = true
 
     world =
         spawnBackend: (callback) ->
@@ -55,5 +57,19 @@ exports.World = (callback) ->
 
                 async.map documents, task, ->
                     callback()
+
+        resetCoffeelintStatus: (callback) ->
+            coffeelintSuccess = true
+            callback()
+
+        runCoffeelint: (path, callback) ->
+            exec "node_modules/.bin/coffeelint -r #{path}", (error, output) ->
+                if error
+                    console.log output
+                    coffeelintSuccess = false
+                callback()
+
+        isCoffeelintSuccess: (text) ->
+            coffeelintSuccess
 
     callback world

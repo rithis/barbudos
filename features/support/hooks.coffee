@@ -13,3 +13,6 @@ module.exports = ->
 
     this.After '@db', (callback) ->
         this.closeDatabaseConnection callback
+
+    this.After (callback) ->
+        this.resetCoffeelintStatus callback
