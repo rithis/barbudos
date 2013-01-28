@@ -48,7 +48,6 @@ app.configure ->
     
     app.use require('connect-coffee-script')
         src: __app
-        bare: true
     
     app.use require('stylus').middleware
         src: __app
@@ -81,6 +80,6 @@ async.waterfall [
     (callback) ->
         port = process.env.PORT or 3000
         app.listen port, ->
-            console.log "Server listening port #{port}"                
+            console.log "Server listening port #{port}"
             callback()
 ]
