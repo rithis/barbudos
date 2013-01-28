@@ -5,7 +5,24 @@ module.exports = ->
         this.runCoffeelint path, callback
 
     this.Then /^coffeelint should be success$/, (callback) ->
-        unless this.isCoffeelintSuccess()
-            callback.fail new Error "Coffeelint failed"
-        else
-            callback()
+        coffeelintErrors = this.getCoffeelintErrors()
+
+        if coffeelintErrors.length == 0
+            return callback()
+
+        message = "Coffeelint failed\n"
+
+        for lint in coffeelintErrors
+            file = lint[0]
+            errors = lint[1]
+            message += "  file #{file}\n"
+
+            for error in errors
+                message += "    line #{error.lineNumber}: #{error.message}\n"
+                
+                if error.context
+                    message += "      #{error.context}\n"
+
+            message += "\n"
+
+        callback.fail message

@@ -15,4 +15,4 @@ module.exports = ->
         this.closeDatabaseConnection callback
 
     this.After (callback) ->
-        this.resetCoffeelintStatus callback
+        this.clearCoffeelintErrors callback
