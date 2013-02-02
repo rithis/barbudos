@@ -1,10 +1,4 @@
-'use strict';
-
-barbudosApp = angular.module 'barbudosApp', ['dishesServices']
-
-barbudosApp.config ['$httpProvider', ($httpProvider) ->
-    delete $httpProvider.defaults.headers.common['X-Requested-With']
-]
+window.barbudosApp = angular.module 'barbudosApp', ['dishesServices']
 
 barbudosApp.config ['$locationProvider', ($locationProvider) ->
     $locationProvider.hashPrefix '!'

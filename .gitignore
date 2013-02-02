@@ -1,11 +1,17 @@
+# ignore IDE settings
 .c9revisions
 .idea
-.sass-cache
 .settings
-components
-dist
+
+# ignore vendors
 node_modules
-temp
-app/scripts/*.js
-app/scripts/*/*.js
-app/styles/*.css
+public/components
+
+# ignore generated files
+public/component.json
+npm-debug.log
+
+# ignore compiled assets
+*.html
+*.js
+*.css
