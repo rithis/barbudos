@@ -22,9 +22,13 @@ exports.World = (callback) ->
             backend = spawn 'node_modules/.bin/coffee', ['barbudos.coffee'],
                 env: PATH: process.env.PATH, MONGOHQ_URL: MONGOHQ_URL
 
-            # callback when backend prints "Server listening port 3000"
-            backend.stdout.once 'data', ->
-                callback()
+            # continue when backend prints "listening port 3000"
+            backendOutput = ''
+            backend.stdout.on 'data', (data) ->
+                backendOutput += data
+                if backendOutput.indexOf 'listening port 3000' >= 0
+                    backend.stdout.removeAllListeners 'data'
+                    callback()
 
         killBackend: (callback) ->
             backend.kill()
