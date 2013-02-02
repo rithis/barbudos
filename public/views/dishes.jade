@@ -8,7 +8,7 @@ table.table
           li(data-ng-repeat="category in categories", data-ng-click="setQuery(category._id)", class="{{ category._id == query && 'active' }}")
             a {{ category.name }}
       th
-        div(data-ng-include="'/views/mini-cart'")
+        div(data-ng-include="'/views/mini-cart.html'")
 
 hr
 
@@ -20,7 +20,7 @@ ul.thumbnails
       p {{ dish.price * count }} руб.
 
       img(src="{{ dish.preview }}")
-      
+
       br
       br
 

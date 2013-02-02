@@ -4,13 +4,14 @@
 .settings
 
 # ignore vendors
-app/components
 node_modules
+public/components
 
 # ignore generated files
-app/component.json
+public/component.json
 npm-debug.log
 
 # ignore compiled assets
+*.html
 *.js
 *.css
