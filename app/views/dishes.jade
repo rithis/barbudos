@@ -1,0 +1,64 @@
+table.table
+  thead
+    tr
+      th
+        h1 Меню
+      th
+        ul(class="nav nav-pills")
+          li(data-ng-repeat="category in categories", data-ng-click="setQuery(category._id)", class="{{ category._id == query && 'active' }}")
+            a {{ category.name }}
+      th
+        div(data-ng-include="'/views/mini-cart'")
+
+hr
+
+ul.thumbnails
+  li.span6(data-ng-repeat="dish in dishes | filter:query")
+    .well(data-ng-init="count=cart.get(dish._id).count || 1")
+      h2 {{ dish.name }}
+      p {{ dish.description }}
+      p {{ dish.price * count }} руб.
+
+      img(src="{{ dish.preview }}")
+      
+      br
+      br
+
+      input(type="text", data-ng-model="count", class="input-small", style="margin:0px;")
+      input(type="button", value="В корзину", class="btn", data-ng-click="cart.add(dish._id, count)")
+            
+      input(type="button", value="Удалить из заказа", class="btn", data-ng-show="cart.has(dish._id)", data-ng-click="cart.remove(dish._id);count=1")
+
+.well
+  form.form-horizontal
+    legend Добавить блюдо
+    .control-group
+      label(class="control-label", for="dish-name") Название
+      .controls
+        input(type="text", id="dish-name", class="input-xxlarge", data-ng-model="dish.name", required)
+
+    .control-group
+      label(class="control-label", for="dish-price") Стоимость
+      .controls
+        input(type="number", id="dish-price", class="input-xxlarge", data-ng-model="dish.price", required)
+        
+    .control-group
+      label(class="control-label", for="dish-description") Описание
+      .controls
+        textarea(id="dish-description", class="input-xxlarge", data-ng-model="dish.description", required)
+
+    .control-group
+      .controls
+        button(type="submit", class="btn btn-primary", data-ng-click="submit(dish)") Добавить
+
+.well
+  form.form-horizontal
+    legend Добавить категорию
+    .control-group
+      label(class="control-label", for="category-name") Название
+      .controls
+        input(type="text", id="category-name", class="input-xxlarge", data-ng-model="category.name", required)
+
+    .control-group
+      .controls
+        button(type="submit", class="btn btn-primary", data-ng-click="submitCategory(category)") Добавить
