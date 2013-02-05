@@ -10,6 +10,7 @@
         "coffee-script": "~1.4",
         "async": "~0.1",
         "glob": "~3.1",
+        "node-uuid": "~1.4",
         
         "express": "~3.1",
         "mongoose": "3.4.x",
@@ -19,7 +20,9 @@
         "coffeelint": "~0.5",
         
         "connect-coffee-script": "~0.1",
+        "jade": "~0.28",
         "stylus": "~0.32",
+        "nib": "~0.9",
         "bower": "~0.6"
     },
     "engines": {
