@@ -1,0 +1,91 @@
+.dishes
+    overflow auto
+    -webkit-overflow-scrolling touch
+
+    .dishes-row
+        clearfix()
+
+    .dishes-item
+        float left
+        width 240px
+        margin 8px
+        padding-bottom 15px
+        background white
+        box-shadow 0 3px 10px 0 rgba(0, 0, 0, .6)
+        text-shadow none
+        color black
+
+        .dishes-item-picture
+            display block
+            
+            .dishes-item-picture-image
+                display block
+                width 200px
+                height 200px
+                margin 20px 20px 10px
+                outline 1px solid #a8a8a8
+
+        .dishes-item-title
+            margin 5px 20px
+            serif 18px
+            font-weight normal
+
+        .dishes-item-description
+            margin 5px 20px 15px
+            sans-serif 16px
+            color #7c7c7c
+
+        .dishes-item-divider
+            width 200px
+            margin 5px auto
+            svg "dishes-item-divider"
+            divider "dishes-item-divider", false
+
+        .dishes-item-price
+            margin 5px 0 3px
+            text-align center
+            serif 24px
+
+        .dishes-item-size
+            margin 3px 0 10px
+            text-align center
+            sans-serif 16px
+            font-style italic
+            color #7c7c7c
+
+            strong
+                font-weight normal
+                color black
+
+        .dishes-item-form
+            width 200px
+            margin 0 auto
+            serif 18px
+
+            .dishes-item-divider
+                margin-bottom 25px
+
+            .dishes-item-form-amount
+                display inline-block
+                width 60px
+                height 30px
+
+    &.dishes-category
+        .no-touch & .dishes-item
+            height 430px
+
+            .dishes-item-form
+                display none
+
+            &:hover
+                .dishes-item-picture
+                    height 87px
+                    overflow hidden
+                    border-bottom 1px solid #a8a8a8
+                    box-shadow inset 0 -30px 30px -30px #b5b5b5
+            
+                .dishes-item-form
+                    display block
+
+    &.dishes-cart
+        responsive display table-cell same block

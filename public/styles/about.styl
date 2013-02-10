@@ -1,0 +1,62 @@
+.about
+    .about-title
+        width 300px
+        responsive margin, 15px auto 20px,
+                           same,
+                           5px auto 10px
+        text-align center
+        text-shadow 0 1px 1px rgba(0, 0, 0, .5)
+        responsive serif 76px same 46px
+
+    .about-photos
+        width 100%
+        overflow auto
+        -webkit-overflow-scrolling touch
+
+        .about-photos-row
+            amount = 3
+            full-width = 510px
+            half-width = full-width * .6
+            full-height = 306px
+            half-height = full-height * .6
+            margins = 10px
+            borders = 2px
+
+            browser-width = (full-width + borders * 2 + margins * 2) * amount
+            phone-width = (half-width + borders * 2 + margins * 2) * amount
+
+            responsive width browser-width same phone-width
+
+            .about-photos-row-image
+                responsive width full-width same half-width
+                responsive height full-height same half-height
+                margin 0 margins
+                border borders solid white
+
+    .about-content
+        responsive width 835px 745px auto
+        responsive margin, 0 auto,
+                           same,
+                           0 10px
+        sans-serif 16px
+        clearfix()
+
+        .about-content-description
+            responsive float left same none
+            responsive width 600px 500px auto
+
+        .about-content-address
+            responsive float right same none
+            responsive width 200px same auto
+
+            .about-content-address-title
+                phone text-align center
+                serif 24px
+                font-weight normal
+
+    .about-map
+        responsive width 835px 745px 90%
+        height 400px
+        responsive margin, 35px auto,
+                           30px auto,
+                           10px auto
