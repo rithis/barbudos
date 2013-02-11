@@ -1,11 +1,21 @@
 module.exports = ->
-    this.World = require('../support/world').World
+    @World = require('../support/world').World
 
-    this.When /^I run coffeelint for "([^"]*)"$/, (path, callback) ->
-        this.runCoffeelint path, callback
+    @When /^I run coffeelint for "([^"]*)"$/, (path, callback) ->
+        options =
+            indentation: value: 4
 
-    this.Then /^coffeelint should be success$/, (callback) ->
-        coffeelintErrors = this.getCoffeelintErrors()
+        @runCoffeelint path, options, callback
+
+    @When /^I run coffeelint for "([^"]*)" with line height "([^"]*)"$/, (path, lineLength, callback) ->
+        options =
+            indentation: value: 4
+            max_line_length: value: lineLength
+
+        @runCoffeelint path, options, callback
+
+    @Then /^coffeelint should be success$/, (callback) ->
+        coffeelintErrors = @getCoffeelintErrors()
 
         if coffeelintErrors.length == 0
             return callback()
