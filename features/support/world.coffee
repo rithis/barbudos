@@ -41,8 +41,61 @@ exports.World = (callback) ->
         visit: (url, callback) ->
             browser.visit url, callback
 
+        reload: (callback) ->
+            browser.reload callback
+
+        toCategory: (category, callback) ->
+            browser.clickLink category, callback
+
+        clickDishButton: (dish, button, callback) ->
+            block = @getDishBlock dish
+            button = browser.query('input[value="В корзину"]', block)
+            button.focus()
+            browser.fire 'click', button, callback
+
         checkPageContainsText: (text) ->
             (browser.html().indexOf text) >= 0
+            
+        cartIsEmpty: ->
+            browser.query('a[href="#!/cart"]').textContent == 0
+        
+        checkPageContainsDish: (name, description, price) ->
+            unless title = browser.query("h2:contains(#{name})")
+                return false
+            
+            unless title.nextSibling.textContent == description
+                return false
+
+            unless title.nextSibling.nextSibling.textContent == "#{price} руб."
+                return false
+
+            return true
+        
+        checkPageCategoriesOrder: (categories) ->
+            exists = []
+            query = '*[data-ng-repeat="category in categories"] > a'
+            for category in browser.queryAll(query) then do (category) ->
+                exists.push category.textContent
+
+            return categories.join() == exists.join()
+
+        categoryIsActive: (category) ->
+            query = 'li.active[data-ng-repeat="category in categories"] > a'
+            active = browser.query query
+            active and active.textContent == category
+
+        dishExists: (dish) ->
+            browser.query("h2:contains(#{dish})")
+
+        dishAmountIs: (dish, amount) ->
+            block = @getDishBlock dish
+            browser.query('input[type="text"]', block).value == amount
+
+        pageTitleIs: (title) ->
+            browser.text("title") == title
+
+        getDishBlock: (dish) ->
+            browser.query("h2:contains(#{dish})").parentNode
 
         createDatabaseConnection: (callback) ->
             connection = mongoose.createConnection(MONGOHQ_URL)
@@ -69,12 +122,11 @@ exports.World = (callback) ->
             coffeelintErrors = []
             callback()
 
-        runCoffeelint: (path, callback) ->
+        runCoffeelint: (path, options, callback) ->
             lint = (files) ->
                 task = (file, callback) ->
                     fs.readFile file, (error, data) ->
-                        errors = coffeelint.lint data.toString(),
-                            indentation: value: 4
+                        errors = coffeelint.lint data.toString(), options
                         
                         if errors.length > 0
                             coffeelintErrors.push [file, errors]
