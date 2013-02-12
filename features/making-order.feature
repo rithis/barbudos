@@ -14,13 +14,13 @@ Feature: Making Order
         When I opened page "/"
         Then I should see "Меню — Бар Барбудос" as a page title
         And I should see "Меню" on the page
-        And I should see dish "Мясо" which "Восхитительное" with price "1000"
-        And I should see dish "Молоко" which "Свежее" with price "100"
-        And I should see dish "Банан" which "Молодой" with price "10"
+        And I should see dish "Мясо" which "Восхитительное" with price "1000" and size "300 гр. в порции"
+        And I should see dish "Молоко" which "Свежее" with price "100" and size "1 литр"
+        And I should see dish "Банан" which "Молодой" with price "10" and size "3 штуки"
 
     Scenario: Filter dishes by category
         Given collection "categories":
-            | name          | _id                      |
+            | name          | _id  |
             | Блюда из мяса | meat |
             | Напитки       | drinks |
             | Десерты       | desserts |
