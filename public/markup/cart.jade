@@ -1,0 +1,42 @@
+extends layout
+
+block body
+    .cart-layout
+        p.cart-title Ваш заказ
+
+        .dishes.dishes-cart
+            .dishes-row(data-dishes)
+                - for (var i = 0; i < 5; i++)
+                    .dishes-item(data-dishes-item)
+                        picture.dishes-item-picture
+                            img.dishes-item-picture-image(src="http://lorempixel.com/200/200/food/1/")
+                        
+                        h2.dishes-item-title Стейк по-кубински
+                        p.dishes-item-description Свежее филе баранины обжаренное на&nbsp;гриле и&nbsp;приправленное острым соусом
+
+                        hr.dishes-item-divider
+                        p.dishes-item-price 200 руб.
+                        p.dishes-item-size <strong>300г.</strong> в порции
+
+                        form.dishes-item-form
+                            hr.dishes-item-divider
+                            .amount(data-amount, data-price="200")
+                                button.button.button-ok.amount-decrease(data-ng-click="decrease()") &#x25c0;
+                                input.amount-input(data-ng-model="amount")
+                                button.button.button-ok.amount-increase(data-ng-click="increase()") &#x25b6;
+                                | &nbsp;=&nbsp;{{ amountPrice }} руб.
+                            button.button.button-cancel(type="submit") Убрать из корзины
+
+        form.cart-form
+            hr.cart-form-divider
+            
+            p.cart-form-total Итого: 1300 руб.
+            hr.cart-form-total-divider
+            
+            label.cart-form-label(for="address") Куда доставить?
+            textarea.cart-form-address#address
+            
+            label.cart-form-label(for="phone") Ваш номер
+            input.cart-form-phone#phone
+            
+            button.button.button-ok.cart-form-submit(type="submit") Оформить заказ

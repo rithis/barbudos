@@ -1,0 +1,29 @@
+.categories-list
+    margin 3px auto 30px
+    phone margin-bottom 10px
+    text-align center
+
+    .categories-list-item
+        display inline-block
+        width auto
+        margin 0
+        responsive padding, 5px 30px, same, 5px 20px
+        border-right none
+        border-radius 0
+        serif 16px
+        font-weight normal
+
+        &:first-child
+            border-radius 6px 0 0 6px
+
+        &:last-child
+            border-right 1px solid #759523
+            border-radius 0 6px 6px 0
+
+        &.categories-list-item-current
+            border-color #759523
+            background-color #8db62f
+            background-image linear-gradient(bottom, #99be3b, #80ae23)
+            box-shadow inset 0 2px 0 0 #b6cd67
+            color #3d4d07
+            text-shadow 0 1px 0 #b6ce6a

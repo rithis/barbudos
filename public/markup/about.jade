@@ -1,0 +1,42 @@
+extends layout
+
+block header
+    .header-layout
+        a.logo.logo-center(href="#!/") Кафе-бар &laquo;Барбудос&raquo;
+
+        hr.header-layout-divider
+
+    .cart-layout
+        a.menu-link(href="#!/") Меню
+
+        .about
+            h1.about-title О баре
+
+            .about-photos
+                .about-photos-row
+                    img.about-photos-row-image(src="http://lorempixel.com/510/306/nightlife/1/")
+                    img.about-photos-row-image(src="http://lorempixel.com/510/306/nightlife/2/")
+                    img.about-photos-row-image(src="http://lorempixel.com/510/306/nightlife/3/")
+
+            .about-content
+                .about-content-description
+                    p
+                        | Возмущение плотности, несмотря на внешние воздействия, упруго
+                        | ускоряет поглотительный гончарный дренаж при любом их взаимном
+                        | расположении.
+                    p
+                        | Несмотря на кажущуюся простоту эксперимента, натяжение
+                        | непрерывно. Напряжение растворяет турбулентный грунт, что дает
+                        | возможность использования данной методики как универсальной.
+                    p
+                        | Определение, вследствие пространственной неоднородности почвенного
+                        | покрова, ускоряет смешанный гранулометрический анализ, хотя этот
+                        | факт нуждается в дальнейшей тщательной экспериментальной проверке.
+
+                .about-content-address
+                    h2.about-content-address-title Наш адрес
+
+                    p Большая Татарская улица, дом 24
+                    p Москва, Россия
+
+            .about-map(data-map, data-lat="55.739868", data-lon="37.632844", data-zoom="16")
