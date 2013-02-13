@@ -24,13 +24,18 @@ dishesDirective.directive "dishes", ($window, Modernizr, FTScroller) ->
         $window.onresize()
 
 
-dishesDirective.directive "amount", ->
+dishesDirective.directive "amount", (cart) ->
     restrict: "A"
     scope: {}
     link: (scope, element, attrs) ->
+        dish = scope.$parent.dish
         attrs.$observe "price", (price) ->
-            scope.price = Number price
-            scope.amount = 1
+            scope.price = scope.$parent.dish.price
+            scope.amount = dish.count or
+                if cart.has(dish._id) then cart.get(dish._id).count else 1
+
+            scope.add = ->
+                cart.add dish._id, scope.amount
 
             scope.decrease = ->
                 scope.amount -= 1
@@ -46,6 +51,10 @@ dishesDirective.directive "amount", ->
 
                 if not scope.amountPrice or scope.amountPrice < 0
                     scope.amountPrice = 0
+
+                if dish.dish and cart.has(dish.dish) and
+                    cart.get(dish.dish).count != scope.amount
+                        cart.add dish.dish, scope.amount
 
 
 dishesDirective.directive "map", (ymaps) ->

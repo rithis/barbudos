@@ -29,6 +29,10 @@ rithis.configure __dirname, "barbudos", (app, db, callback) ->
             type: 'string',
             required: true,
             default: 'http://lorempixel.com/300/300/food/1'
+        category:
+            type: rithis.Schema.Types.ObjectId
+            ref: 'CategorySchema'
+            required: true
         count: type: 'number', required: true
 
     CartSchema = new rithis.Schema
@@ -93,7 +97,7 @@ rithis.configure __dirname, "barbudos", (app, db, callback) ->
             if exists
                 return cart.save afterCartSaved
 
-            Dish.findOne req.query.dish, (err, dish) ->
+            Dish.findOne _id: req.query.dish, (err, dish) ->
                 if err
                     return req.send 500
 
