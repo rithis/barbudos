@@ -4,3 +4,10 @@ barbudosApp.controller 'DishesCtrl', ($scope, Dish, cart) ->
 
     $scope.$on 'cart-updated', (e,arg) ->
         $scope.cart = cart
+
+    $scope.add = ->
+        $scope.dishes.push new Dish
+            name: 'Название'
+            description: 'Описание'
+            price: 0
+            category: $scope.category

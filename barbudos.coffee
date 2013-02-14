@@ -1,56 +1,64 @@
-rithis = require 'rithis-stack'
-uuid = require 'node-uuid'
+rithis = require "rithis-stack"
+uuid = require "node-uuid"
 
 
-rithis.configure __dirname, "barbudos", (app, db, callback) ->
+rithis.configure __dirname, "barbudos", (stack, callback) ->
+    # plugins
+    stack.plugins.push rithis.plugins.files
+    
+    # variables
+    mongoose = stack.mongoose
+    app = stack.app
+    db = stack.connection
+
     # schemas
-    CategorySchema = new rithis.Schema
-        name: type: 'string', required: true
+    CategorySchema = new mongoose.Schema
+        name: type: "string", required: true
 
-    DishSchema = new rithis.Schema
-        name: type: 'string', required: true
-        price: type: 'number', required: true
-        description: type: 'string', required: true
+    DishSchema = new mongoose.Schema
+        name: type: "string", required: true
+        price: type: "number", required: true
+        description: type: "string", required: true
         preview:
-            type: 'string',
+            type: "string",
             required: true,
-            default: 'http://lorempixel.com/300/300/food/1'
+            default: "http://lorempixel.com/300/300/food/1"
         category:
-            type: rithis.Schema.Types.ObjectId
-            ref: 'CategorySchema'
+            type: mongoose.Schema.Types.ObjectId
+            ref: "CategorySchema"
             required: true
 
-    PositionSchema = new rithis.Schema
-        dish: type: rithis.Schema.Types.ObjectId, ref: 'DishSchema'
-        name: type: 'string', required: true
-        price: type: 'number', required: true
-        description: type: 'string', required: true
+    PositionSchema = new mongoose.Schema
+        dish: type: mongoose.Schema.Types.ObjectId, ref: "DishSchema"
+        name: type: "string", required: true
+        price: type: "number", required: true
+        description: type: "string", required: true
         preview:
-            type: 'string',
+            type: "string",
             required: true,
             default: 'http://lorempixel.com/300/300/food/1'
         category:
-            type: rithis.Schema.Types.ObjectId
+            type: mongoose.Schema.Types.ObjectId
             ref: 'CategorySchema'
             required: true
         count: type: 'number', required: true
 
-    CartSchema = new rithis.Schema
-        uuid: type: 'string', required: true
+    CartSchema = new mongoose.Schema
+        uuid: type: "string", required: true
         createdAt: type: Date, default: Date.now
         positions: [PositionSchema]
 
-    OrderSchema = new rithis.Schema
-        cart: type: rithis.Schema.Types.ObjectId, ref: 'CartSchema'
-        address: type: 'string', required: true
-        phone: type: 'string', required: true
+    OrderSchema = new mongoose.Schema
+        cart: type: "string", required: true
+        address: type: "string", required: true
+        phone: type: "string", required: true
 
     # models
-    Category = db.model 'categories', CategorySchema
-    Dish = db.model 'dishes', DishSchema
-    Position = db.model 'positions', PositionSchema
-    Cart = db.model 'carts', CartSchema
-    Order = db.model 'orders', OrderSchema
+    Category = db.model "categories", CategorySchema
+    Dish = db.model "dishes", DishSchema
+    Position = db.model "positions", PositionSchema
+    Cart = db.model "carts", CartSchema
+    Order = db.model "orders", OrderSchema
 
     # actions
     getCartAction = (req, res) ->
@@ -121,7 +129,7 @@ rithis.configure __dirname, "barbudos", (app, db, callback) ->
                 return res.send 404
             
             data = req.query
-            data.cart = cart._id
+            data.cart = cart.uuid
                 
             order = new Order data
             order.save (err, order) ->
@@ -131,25 +139,35 @@ rithis.configure __dirname, "barbudos", (app, db, callback) ->
                 res.send order
 
     # routes
-    app.get '/dishes', rithis.crud
+    app.get "/dishes", stack.crud
         .list(Dish)
         .make()
-    app.post '/dishes', rithis.crud
+    app.post "/dishes", stack.crud
         .post(Dish)
         .make()
+    app.get "/dishes/:id", stack.crud
+        .get(Dish)
+        .make()
+    app.post "/dishes/:id", stack.crud
+        .put(Dish)
+        .make()
     
-    app.get '/categories', rithis.crud
+    app.get "/categories", stack.crud
         .list(Category)
         .make()
-    app.post '/categories', rithis.crud
+    app.post "/categories", stack.crud
         .post(Category)
         .make()
 
-    app.get '/carts/:id', getCartAction
-    app.post '/carts', postCartAction
-    app.post '/carts/:id/positions', postCartPositionAction
+    app.get "/carts/:id", getCartAction
+    app.post "/carts", postCartAction
+    app.post "/carts/:id/positions", postCartPositionAction
 
-    app.post '/orders', postOrderAction
+    app.get "/orders", stack.crud
+        .list(Order)
+        .make()
+
+    app.post "/orders", postOrderAction
 
     # done
     callback()

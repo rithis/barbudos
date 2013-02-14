@@ -15,6 +15,10 @@ ordersServices.factory 'Order', ['$resource', ($resource) ->
     $resource '/orders/:orderId'
 ]
 
+cartServices.factory 'Cart', ['$resource', ($resource) ->
+    $resource '/carts/:cartId'
+]
+
 cartServices.factory 'cart', ($rootScope, $resource, $cookieStore) ->
     callback = (cart) ->
         $cookieStore.put 'cartId', cart.uuid

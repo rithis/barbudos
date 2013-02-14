@@ -31,3 +31,27 @@ include header
                     button.button.button-ok.amount-increase(data-ng-click="increase()") &#x25b6;
                     | &nbsp;=&nbsp;{{ amountPrice }} руб.
                     button.button.button-ok(type="submit", data-ng-click="add()") В корзину
+
+
+        .dishes-item.dishes-item-edit(data-dishes-item, class="{{ !dish._id && 'dishes-item-new' }}", data-ng-repeat="dish in dishes | filter:category")
+            picture.dishes-item-picture
+                img.dishes-item-picture-image(src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
+
+            h2.dishes-item-title(data-editable='name') {{ dish.name }}
+            p.dishes-item-description(data-editable='description') {{ dish.description }}
+
+            hr.dishes-item-divider
+            p.dishes-item-price
+                span(data-editable='price') {{ dish.price }} 
+                span руб.
+            p.dishes-item-size <strong>300г.</strong> в порции
+
+            form.dishes-item-form
+                hr.dishes-item-divider
+                button.button.button-ok(data-save, type="submit", data-ng-click="save()", data-ng-hide="dish._id") Сохранить
+
+        .dishes-item(data-dishes-item, ng-click="add()")
+            div(style="text-align:center;padding-top: 115px;font:18px 'PT Serif Caption', serif;color: #7c7c7c;")
+                span(style="font-size:108px;font-weight:bold;") +
+                br
+                span(style="") Добавить
