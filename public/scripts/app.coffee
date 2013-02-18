@@ -39,8 +39,13 @@ barbudosApp.config ['$routeProvider', ($routeProvider) ->
 barbudosApp.config ($httpProvider) ->
     $httpProvider.responseInterceptors.push ($location, $cookieStore) ->
         (promise) ->
-            promise.then (response) ->
+            success = (response) ->
+                response
+
+            error = (response) ->
                 if response.status == 401
                     $cookieStore.remove 'authToken'
                     $location.path '/login'
-                return response
+                response
+
+            promise.then success, error
