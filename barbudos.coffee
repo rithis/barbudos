@@ -4,7 +4,9 @@ uuid = require "node-uuid"
 
 rithis.configure __dirname, "barbudos", (stack, callback) ->
     # plugins
+    stack.plugins.push rithis.plugins.auth
     stack.plugins.push rithis.plugins.files
+    stack.plugins.push rithis.plugins.fixtures
     
     # variables
     mongoose = stack.mongoose
@@ -137,6 +139,12 @@ rithis.configure __dirname, "barbudos", (stack, callback) ->
                     return res.send 500
 
                 res.send order
+    
+    isAuthenticated = (req,res,next) ->
+        if req.user
+            next()
+        else
+            res.send 401
 
     # routes
     app.get "/dishes", stack.crud
@@ -163,7 +171,7 @@ rithis.configure __dirname, "barbudos", (stack, callback) ->
     app.post "/carts", postCartAction
     app.post "/carts/:id/positions", postCartPositionAction
 
-    app.get "/orders", stack.crud
+    app.get "/orders", isAuthenticated, stack.crud
         .list(Order)
         .make()
 

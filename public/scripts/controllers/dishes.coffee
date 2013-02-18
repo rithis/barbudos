@@ -1,5 +1,6 @@
-barbudosApp.controller 'DishesCtrl', ($scope, Dish, cart) ->
+barbudosApp.controller 'DishesCtrl', ($scope, Dish, cart, user) ->
     $scope.cart = cart
+    $scope.user = user
     $scope.dishes = Dish.query()
 
     $scope.$on 'cart-updated', (e,arg) ->
