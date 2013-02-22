@@ -5,6 +5,13 @@
     .dishes-row
         clearfix()
 
+    .dishes-item-new
+        .dishes-item-title
+            font-style italic
+
+        .dishes-item-description
+            font-style italic
+
     .dishes-item
         float left
         width 240px
@@ -86,6 +93,19 @@
             
                 .dishes-item-form
                     display block
+
+            &.dishes-item-edit
+                .dishes-item-form
+                    display block
+
+                    .dishes-item-divider
+                        margin-bottom 10px
+
+                &:hover
+                    .dishes-item-picture
+                        height 225px
+                        border-bottom none
+                    box-shadow none
 
     &.dishes-cart
         responsive display table-cell same block

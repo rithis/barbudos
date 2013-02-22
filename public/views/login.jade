@@ -1,0 +1,26 @@
+include header
+
+.cart-layout
+    p.rolled-cart(data-ng-show="cart.count() > 0")
+        | {{ cart.count() }} блюд на {{ cart.price() }} руб.
+        a.rolled-cart-button(href="#!/cart") Корзина
+
+    p.rolled-cart(data-ng-show="cart.count() == 0")
+        | Что закажете?
+
+.login-backdrop
+
+.login-modal
+    .login-title
+        img(src="/images/logo.png", width="100")
+        span Авторизация
+
+    form.login-form(name="auth")
+        .login-fields
+            div
+                input(name="username", placeholder="Логин", data-ng-model="user.username")
+            div
+                input(name="password", type="password", placeholder="Пароль", data-ng-model="user.password")
+
+        .login-submit
+            button(type="submit", class="button button-ok", data-ng-click="submit()") Войти

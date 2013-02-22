@@ -1,0 +1,20 @@
+.header-layout
+    a.logo.logo-center(href="/#!/") Кафе-бар &laquo;Барбудос&raquo;
+
+    hr.header-layout-divider
+
+.orders
+    .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders")
+        .orders-item-info(data-ng-click="toggleDetail()")  {{ order.address }}, {{ order.phone }}
+        .orders-item-detail(data-ng-show="detail")
+            .dishes.dishes-category
+                .dishes-row(data-dishes)
+                    .dishes-item(data-dishes-item, data-ng-repeat="position in cart.positions")
+                        picture.dishes-item-picture
+                            img.dishes-item-picture-image(src="{{ position.preview }}")
+
+                            h2.dishes-item-title {{ position.name }}
+                            p.dishes-item-description {{ position.description }}
+
+                            hr.dishes-item-divider
+                            p.dishes-item-price {{ position.price }} руб.

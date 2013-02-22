@@ -2,6 +2,7 @@ dishesServices = angular.module 'dishesServices', ['ngResource']
 categoriesServices = angular.module 'categoriesServices', ['ngResource']
 ordersServices = angular.module 'ordersServices', ['ngResource']
 cartServices = angular.module 'cartServices', ['ngResource', 'ngCookies']
+userServices = angular.module 'userServices', ['ngResource', 'ngCookies']
 
 dishesServices.factory 'Dish', ['$resource', ($resource) ->
     $resource '/dishes/:dishId'
@@ -13,6 +14,10 @@ categoriesServices.factory 'Category', ['$resource', ($resource) ->
 
 ordersServices.factory 'Order', ['$resource', ($resource) ->
     $resource '/orders/:orderId'
+]
+
+cartServices.factory 'Cart', ['$resource', ($resource) ->
+    $resource '/carts/:cartId'
 ]
 
 cartServices.factory 'cart', ($rootScope, $resource, $cookieStore) ->
@@ -72,3 +77,16 @@ cartServices.factory 'cart', ($rootScope, $resource, $cookieStore) ->
         angular.forEach @all(), (position) ->
             price += position.count * position.price
         price
+
+userServices.factory 'user', ($resource, $http, $cookieStore) ->
+    if $cookieStore.get 'authToken'
+        $http.defaults.headers.common.Authorization =
+            "Token #{$cookieStore.get 'authToken'}"
+
+    isAuthenticated: ->
+        $cookieStore.get('authToken')?
+    auth: (username, password, callback) ->
+        $http.post('/auth-token', username: username, password: password)
+            .success (auth) ->
+                $cookieStore.put 'authToken', auth.authToken if auth.authToken
+                callback(auth.error) if callback
