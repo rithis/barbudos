@@ -3,7 +3,9 @@ window.barbudosApp = angular.module 'barbudosApp', [
     'categoriesServices',
     'cartServices',
     'ordersServices',
-    'dishesDirective'
+    'userServices',
+    'dishesDirective',
+    'ordersDirective'
 ]
 
 barbudosApp.config ['$locationProvider', ($locationProvider) ->
@@ -21,7 +23,29 @@ barbudosApp.config ['$routeProvider', ($routeProvider) ->
 
     $routeProvider.when '/about',
         templateUrl: 'views/about.html'
+
+    $routeProvider.when '/orders',
+        templateUrl: 'views/orders.html'
+        controller: 'OrdersCtrl'
+
+    $routeProvider.when '/login',
+        templateUrl: 'views/login.html'
+        controller: 'LoginCtrl'
         
     $routeProvider.otherwise
         redirectTo: '/'
 ]
+
+barbudosApp.config ($httpProvider) ->
+    $httpProvider.responseInterceptors.push ($location, $cookieStore) ->
+        (promise) ->
+            success = (response) ->
+                response
+
+            error = (response) ->
+                if response.status == 401
+                    $cookieStore.remove 'authToken'
+                    $location.path '/login'
+                response
+
+            promise.then success, error

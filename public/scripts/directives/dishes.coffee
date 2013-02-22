@@ -70,3 +70,45 @@ dishesDirective.directive "map", (ymaps) ->
             placemark = new ymaps.Placemark coordinates
             
             map.geoObjects.add placemark
+
+dishesDirective.directive "editable", (Dish) ->
+    restrict: "A"
+    scope: {}
+    link: (scope, element, attrs) ->
+        attrs.$set 'contenteditable', 'true'
+        scope.dish = scope.$parent.dish
+        element.bind 'blur', ->
+            scope.$apply ->
+                scope.dish[attrs.editable] = element.html()
+                if scope.dish._id
+                    Dish.get dishId: scope.dish._id, (dish) ->
+                        dish[attrs.editable] = element.html()
+                        dish.$save dishId: dish._id
+
+dishesDirective.directive "save", (Dish) ->
+    restrict: "A"
+    scope: {}
+    link: (scope, element, attrs) ->
+        scope.dish = scope.$parent.dish
+        scope.save = ->
+            (new Dish scope.dish).$save scope.dish, (dish) ->
+                scope.dish = dish
+                scope.$apply()
+
+dishesDirective.directive 'fileupload', ($window, Dish) ->
+    link: (scope, element) ->
+        fileupload = $('<input type="file">').fileupload
+            url: "/files"
+            paramName: "file"
+
+        fileupload.bind "fileuploaddone", (event, data) ->
+            scope.dish.preview = data.jqXHR.getResponseHeader "Location"
+            scope.$apply()
+            if scope.dish._id
+                Dish.get dishId: scope.dish._id, (dish) ->
+                    dish.preview = scope.dish.preview
+                    dish.$save dishId: dish._id
+            
+        scope.add = ->
+            fileupload.click()
+

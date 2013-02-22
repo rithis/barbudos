@@ -6,6 +6,9 @@
         "bootstrap": "~2.1",
         "normalize-css": "~2.1",
         "modernizr": "~2.6",
-        "ftscroller": "~0.2"
+        "ftscroller": "~0.2",
+        "jquery": "~1.9",
+        "jquery.ui": "~1.9",
+        "jquery-file-upload": "~7.2"
     }
 }
