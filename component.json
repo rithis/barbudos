@@ -3,8 +3,9 @@
         "angular": "~1.0",
         "angular-resource": "~1.0",
         "angular-cookies": "~1.0",
-        "es5-shim": "~2.0",
-        "json3": "~3.2",
-        "bootstrap": "~2.1"
+        "bootstrap": "~2.1",
+        "normalize-css": "~2.1",
+        "modernizr": "~2.6",
+        "ftscroller": "~0.2"
     }
 }

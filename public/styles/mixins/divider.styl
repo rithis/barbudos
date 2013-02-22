@@ -1,0 +1,10 @@
+divider(name, resetMargin = true)
+    size = image-size("../images/" + name + ".png")
+
+    if resetMargin
+        margin-top 0
+        margin-bottom 0
+
+    height size[1]
+    border none
+    image name

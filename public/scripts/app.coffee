@@ -2,7 +2,8 @@ window.barbudosApp = angular.module 'barbudosApp', [
     'dishesServices',
     'categoriesServices',
     'cartServices',
-    'ordersServices'
+    'ordersServices',
+    'dishesDirective'
 ]
 
 barbudosApp.config ['$locationProvider', ($locationProvider) ->
@@ -17,6 +18,9 @@ barbudosApp.config ['$routeProvider', ($routeProvider) ->
     $routeProvider.when '/cart',
         templateUrl: 'views/cart.html'
         controller: 'CartCtrl'
+
+    $routeProvider.when '/about',
+        templateUrl: 'views/about.html'
         
     $routeProvider.otherwise
         redirectTo: '/'

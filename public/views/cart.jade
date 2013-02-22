@@ -1,41 +1,40 @@
-h1
-  | Корзина
-  a(href="#!/dishes", style="float:right;font-size:14px;") Вернутся к меню
+include header
 
-hr
+.cart-layout
+    p.cart-title Ваш заказ
 
-.well
-  | Итого {{ cart.price() }} руб.
-  hr
+    .dishes.dishes-cart
+        .dishes-row(data-dishes)
+            .dishes-item(data-dishes-item, data-ng-repeat="dish in cart.all() | filter:category")
+                picture.dishes-item-picture
+                    img.dishes-item-picture-image(src="{{ dish.preview }}")
 
-  form.form-horizontal
-    .control-group
-      label(for="order-address", class="control-label") Куда доставить
-      .controls
-        textarea(id="order-address", class="input-xxlarge", data-ng-model="order.address", required)
+                h2.dishes-item-title {{ dish.name }}
+                p.dishes-item-description {{ dish.description }}
 
-    .control-group
-      label(for="order-phone", class="control-label") Телефон
-      .controls
-        input(id="order-phone", type="text", class="input-xxlarge", data-ng-model="order.phone", required)
-    
-    .control-group
-      .controls
-        button(type="submit",class="btn btn-primary", data-ng-click="submit(order)") Оформить заказ
+                hr.dishes-item-divider
+                p.dishes-item-price {{ dish.price }} руб.
+                p.dishes-item-size <strong>300г.</strong> в порции
 
-ul.thumbnails
-  li.span6(data-ng-repeat="position in cart.all()")
-    .well(data-ng-init="count=cart.get(position.dish).count || 1")
-      h2 {{ position.name }}
-      p {{ position.description }}
-      p {{ position.price * count }} руб.
+                form.dishes-item-form
+                    hr.dishes-item-divider
+                    .amount(data-amount)
+                        button.button.button-ok.amount-decrease(data-ng-click="decrease()") &#x25c0;
+                        input.amount-input(data-ng-model="amount")
+                        button.button.button-ok.amount-increase(data-ng-click="increase()") &#x25b6;
+                        | &nbsp;=&nbsp;{{ amountPrice }} руб.
+                    button.button.button-cancel(type="submit", data-ng-click="cart.remove(dish.dish)") Убрать из корзины
 
-      img(src="{{ position.preview }}")
-      
-      br
-      br
-
-      input(type="text", data-ng-model="count", class="input-small", style="margin:0px;")
-      input(type="button", value="В корзину", class="btn", data-ng-click="cart.add(position.dish, count)")
-
-      input(type="button", value="Удалить из заказа", class="btn", data-ng-show="cart.has(position.dish)", data-ng-click="cart.remove(position.dish);count=1")
+    form.cart-form
+        hr.cart-form-divider
+        
+        p.cart-form-total Итого: {{ cart.price() }} руб.
+        hr.cart-form-total-divider
+            
+        label.cart-form-label(for="address") Куда доставить?
+        textarea.cart-form-address#address(data-ng-model="order.address")
+            
+        label.cart-form-label(for="phone") Ваш номер
+        input.cart-form-phone#phone(data-ng-model="order.phone")
+            
+        button.button.button-ok.cart-form-submit(type="submit", data-ng-click="submit(order)") Оформить заказ
