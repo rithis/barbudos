@@ -1,11 +1,13 @@
 # ignore IDE settings
 .c9revisions
+.components
 .idea
 .settings
 
 # ignore vendors
 node_modules
 public/components
+public/uploads
 
 # ignore generated files
 public/component.json

@@ -1,19 +1,32 @@
-rithis = require "rithis-stack"
+supplier = require "supplier"
 uuid = require "node-uuid"
 
+container = supplier "barbudos"
+container.set "components", [
+    "angular#~1.0",
+    "angular-resource#~1.0",
+    "angular-cookies#~1.0",
+    "bootstrap#~2.1",
+    "normalize-css#~2.1",
+    "modernizr#~2.6",
+    "ftscroller#~0.2",
+    "jquery#~1.9",
+    "jquery.ui#~1.9",
+    "jquery-file-upload#~7.2"
+]
 
-rithis.configure __dirname, "barbudos", (stack, callback) ->
-    # plugins
-    stack.plugins.push rithis.plugins.auth
-    stack.plugins.push rithis.plugins.files
-    stack.plugins.push rithis.plugins.fixtures
-    
-    # variables
-    mongoose = stack.mongoose
-    app = stack.app
-    db = stack.connection
+loader = container.get "loader"
+loader.use supplier.plugins.express
+loader.use supplier.plugins.assets
+loader.use supplier.plugins.bower
+loader.use supplier.plugins.mongoose
+loader.use supplier.plugins.auth
+loader.use supplier.plugins.uploads
 
-    # schemas
+loader.use (container, callback) ->
+    connection = container.get "connection"
+    mongoose = container.get "mongoose"
+
     CategorySchema = new mongoose.Schema
         name: type: "string", required: true
 
@@ -55,14 +68,29 @@ rithis.configure __dirname, "barbudos", (stack, callback) ->
         address: type: "string", required: true
         phone: type: "string", required: true
 
-    # models
-    Category = db.model "categories", CategorySchema
-    Dish = db.model "dishes", DishSchema
-    Position = db.model "positions", PositionSchema
-    Cart = db.model "carts", CartSchema
-    Order = db.model "orders", OrderSchema
+    Category = connection.model "categories", CategorySchema
+    Position = connection.model "positions", PositionSchema
+    Order = connection.model "orders", OrderSchema
+    Dish = connection.model "dishes", DishSchema
+    Cart = connection.model "carts", CartSchema
 
-    # actions
+    callback()
+
+loader.use supplier.plugins.fixtures
+loader.use supplier.plugins.crud
+
+loader.use (container, callback) ->
+    connection = container.get "connection"
+    unloader = container.get "unloader"
+    crud = container.get "crud"
+    app = container.get "app"
+
+    Category = connection.model "categories"
+    Position = connection.model "positions"
+    Order = connection.model "orders"
+    Dish = connection.model "dishes"
+    Cart = connection.model "carts"
+
     getCartAction = (req, res) ->
         Cart.findOne uuid: req.params.id, (err, cart) ->
             if err
@@ -129,53 +157,42 @@ rithis.configure __dirname, "barbudos", (stack, callback) ->
 
             unless cart
                 return res.send 404
-            
+
             data = req.query
             data.cart = cart.uuid
-                
+
             order = new Order data
             order.save (err, order) ->
                 if err
                     return res.send 500
 
                 res.send order
-    
+
     isAuthenticated = (req,res,next) ->
         if req.user
             next()
         else
             res.send 401
 
-    # routes
-    app.get "/dishes", stack.crud
-        .list(Dish)
-        .make()
-    app.post "/dishes", stack.crud
-        .post(Dish)
-        .make()
-    app.get "/dishes/:id", stack.crud
-        .get(Dish)
-        .make()
-    app.post "/dishes/:id", stack.crud
-        .put(Dish)
-        .make()
-    
-    app.get "/categories", stack.crud
-        .list(Category)
-        .make()
-    app.post "/categories", stack.crud
-        .post(Category)
-        .make()
+    app.get "/dishes", crud.list(Dish).make()
+    app.post "/dishes", crud.post(Dish).make()
+    app.get "/dishes/:id", crud.get(Dish).make()
+    app.post "/dishes/:id", crud.put(Dish).make()
+
+    app.get "/categories", crud.list(Category).make()
+    app.post "/categories", crud.post(Category).make()
 
     app.get "/carts/:id", getCartAction
     app.post "/carts", postCartAction
     app.post "/carts/:id/positions", postCartPositionAction
 
-    app.get "/orders", isAuthenticated, stack.crud
-        .list(Order)
-        .make()
+    app.get "/orders", isAuthenticated, crud.list(Order).make()
 
     app.post "/orders", postOrderAction
 
-    # done
     callback()
+
+module.exports = container
+
+if require.main is module
+    loader.load()

@@ -79,14 +79,20 @@ cartServices.factory 'cart', ($rootScope, $resource, $cookieStore) ->
         price
 
 userServices.factory 'user', ($resource, $http, $cookieStore) ->
-    if $cookieStore.get 'authToken'
-        $http.defaults.headers.common.Authorization =
-            "Token #{$cookieStore.get 'authToken'}"
+    setToken = (token) ->
+        $http.defaults.headers.common.Authorization = "Token #{token}"
+
+    if $cookieStore.get 'token'
+        $http.get("/sessions/#{$cookieStore.get 'token'}")
+            .success (data, status) ->
+                setToken $cookieStore.get 'token' if status is 200
+                $cookieStore.remove 'token' if status is 404
 
     isAuthenticated: ->
-        $cookieStore.get('authToken')?
+        $cookieStore.get('token')?
     auth: (username, password, callback) ->
-        $http.post('/auth-token', username: username, password: password)
-            .success (auth) ->
-                $cookieStore.put 'authToken', auth.authToken if auth.authToken
-                callback(auth.error) if callback
+        $http.post('/sessions', username: username, password: password)
+            .success (auth, status) ->
+                $cookieStore.put 'token', auth.token if auth.token
+                setToken auth.token
+                callback(auth.token) if callback

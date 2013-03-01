@@ -98,7 +98,7 @@ dishesDirective.directive "save", (Dish) ->
 dishesDirective.directive 'fileupload', ($window, Dish) ->
     link: (scope, element) ->
         fileupload = $('<input type="file">').fileupload
-            url: "/files"
+            url: "/uploads"
             paramName: "file"
 
         fileupload.bind "fileuploaddone", (event, data) ->
