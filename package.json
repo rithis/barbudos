@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "coffee-script": "~1.4",
-        "rithis-stack": "~0.1",
+        "supplier": "~0.3",
         "node-uuid": "~1.4",
 
         "cucumber": "~0.3",

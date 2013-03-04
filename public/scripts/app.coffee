@@ -16,7 +16,7 @@ barbudosApp.config ['$routeProvider', ($routeProvider) ->
     $routeProvider.when '/',
         templateUrl: 'views/dishes.html'
         controller: 'DishesCtrl'
-    
+
     $routeProvider.when '/cart',
         templateUrl: 'views/cart.html'
         controller: 'CartCtrl'
@@ -31,7 +31,7 @@ barbudosApp.config ['$routeProvider', ($routeProvider) ->
     $routeProvider.when '/login',
         templateUrl: 'views/login.html'
         controller: 'LoginCtrl'
-        
+
     $routeProvider.otherwise
         redirectTo: '/'
 ]
@@ -44,7 +44,7 @@ barbudosApp.config ($httpProvider) ->
 
             error = (response) ->
                 if response.status == 401
-                    $cookieStore.remove 'authToken'
+                    $cookieStore.remove 'token'
                     $location.path '/login'
                 response
 
