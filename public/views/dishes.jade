@@ -22,7 +22,7 @@ include header
 
                 hr.dishes-item-divider
                 p.dishes-item-price {{ dish.price }} руб.
-                p.dishes-item-size <strong>300г.</strong> в порции
+                p.dishes-item-size <strong>{{ dish.size }} {{ dish.sizeUnit }}.</strong> в порции
 
                 form.dishes-item-form
                     hr.dishes-item-divider
@@ -46,7 +46,10 @@ include header
                 p.dishes-item-price
                     span(data-editable='price') {{ dish.price }} 
                     span руб.
-                p.dishes-item-size <strong>300г.</strong> в порции
+                p.dishes-item-size
+                    span(data-editable='size') {{ dish.size }}
+                    select.dishes-item-size-unit(data-editable='sizeUnit')
+                        option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
 
                 form.dishes-item-form
                     hr.dishes-item-divider

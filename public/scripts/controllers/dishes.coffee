@@ -11,4 +11,5 @@ barbudosApp.controller 'DishesCtrl', ($scope, Dish, cart, user) ->
             name: 'Название'
             description: 'Описание'
             price: 0
+            size: 0
             category: $scope.category

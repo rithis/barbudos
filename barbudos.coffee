@@ -34,6 +34,13 @@ loader.use (container, callback) ->
         name: type: "string", required: true
         price: type: "number", required: true
         description: type: "string", required: true
+        size: type: "number", required: true
+        sizeUnit:
+            type: "string"
+            required: true
+            default: "гр"
+            validate: (value) ->
+                /гр|мл|шт/i.test value
         preview:
             type: "string",
             required: true,
