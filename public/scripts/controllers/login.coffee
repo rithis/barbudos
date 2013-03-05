@@ -1,4 +1,4 @@
-barbudosApp.controller 'LoginCtrl', ($scope, $location, user) ->    
+barbudosApp.controller 'LoginCtrl', ($scope, $location, user) ->
     $scope.user = {}
 
     $scope.submit = ->

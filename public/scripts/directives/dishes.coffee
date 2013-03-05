@@ -1,4 +1,8 @@
-dishesDirective = angular.module "dishesDirective", ["Modernizr", "FTScroller", "ymaps"]
+dishesDirective = angular.module "dishesDirective", [
+    "Modernizr"
+    "FTScroller"
+    "ymaps"
+]
 
 dishesDirective.directive "dishes", ($window, Modernizr, FTScroller) ->
     restrict: "A"
@@ -52,8 +56,8 @@ dishesDirective.directive "amount", (cart) ->
                 if not scope.amountPrice or scope.amountPrice < 0
                     scope.amountPrice = 0
 
-                if dish.dish and cart.has(dish.dish) and
-                    cart.get(dish.dish).count != scope.amount
+                if dish.dish and cart.has(dish.dish)
+                    if cart.get(dish.dish).count != scope.amount
                         cart.add dish.dish, scope.amount
 
 
@@ -80,8 +84,7 @@ dishesDirective.directive "editable", (Dish) ->
         element.bind 'blur', ->
             scope.$apply ->
                 if attrs.numerable
-                    element.html element.html().replace /\D/g, ''
-                scope.dish[attrs.editable] = element.val() or element.text()
+                    element.text element.text().replace /\D/g, ''
                 if scope.dish._id
                     Dish.get dishId: scope.dish._id, (dish) ->
                         dish[attrs.editable] = element.val() or element.text()
