@@ -80,8 +80,7 @@ dishesDirective.directive "editable", (Dish) ->
         element.bind 'blur', ->
             scope.$apply ->
                 if attrs.numerable
-                    element.html element.html().replace /\D/g, ''
-                scope.dish[attrs.editable] = element.val() or element.text()
+                    element.text element.text().replace /\D/g, ''
                 if scope.dish._id
                     Dish.get dishId: scope.dish._id, (dish) ->
                         dish[attrs.editable] = element.val() or element.text()
