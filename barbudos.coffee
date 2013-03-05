@@ -1,7 +1,7 @@
-supplier = require "supplier"
+symfio = require "symfio"
 uuid = require "node-uuid"
 
-container = supplier "barbudos"
+container = symfio "barbudos"
 container.set "components", [
     "angular#~1.0",
     "angular-resource#~1.0",
@@ -16,12 +16,12 @@ container.set "components", [
 ]
 
 loader = container.get "loader"
-loader.use supplier.plugins.express
-loader.use supplier.plugins.assets
-loader.use supplier.plugins.bower
-loader.use supplier.plugins.mongoose
-loader.use supplier.plugins.auth
-loader.use supplier.plugins.uploads
+loader.use symfio.plugins.express
+loader.use symfio.plugins.assets
+loader.use symfio.plugins.bower
+loader.use symfio.plugins.mongoose
+loader.use symfio.plugins.auth
+loader.use symfio.plugins.uploads
 
 loader.use (container, callback) ->
     connection = container.get "connection"
@@ -76,8 +76,8 @@ loader.use (container, callback) ->
 
     callback()
 
-loader.use supplier.plugins.fixtures
-loader.use supplier.plugins.crud
+loader.use symfio.plugins.fixtures
+loader.use symfio.plugins.crud
 
 loader.use (container, callback) ->
     connection = container.get "connection"
