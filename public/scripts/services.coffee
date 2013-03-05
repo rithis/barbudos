@@ -20,11 +20,12 @@ cartServices.factory 'Cart', ['$resource', ($resource) ->
     $resource '/carts/:cartId'
 ]
 
-cartServices.factory 'cart', ($rootScope, $resource, $cookieStore) ->
+cartServices.factory 'cart', ($rootScope, $resource, $cookieStore, $location) ->
     callback = (cart) ->
         $cookieStore.put 'cartId', cart.uuid
         $rootScope.cart = cart
         $rootScope.$broadcast 'cart-updated'
+        $rootScope.location = $location
             
     create = ->
         Cart = $resource '/carts'

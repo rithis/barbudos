@@ -2,9 +2,9 @@
     a.logo.logo-left(href="#!/") Кафе-бар &laquo;Барбудос&raquo;
                 
     h1.title Меню
-                
+
     nav.categories-list(ng-controller="CategoriesCtrl")
-        a.button.button-ok.categories-list-item(data-ng-repeat="category in categories", data-ng-click="setActive(category._id)", class="{{ category._id == active && 'categories-list-item-current' }}") {{ category.name }}
+        a.button.button-ok.categories-list-item(data-ng-repeat="category in categories", data-ng-click="setActive(category._id)", class="{{category._id == active && 'categories-list-item-current'}}", style="{{location.path() == '/cart' && 'visibility:hidden;'}}") {{ category.name }}
 
     span.header-links
         a(href="#!/orders", data-ng-show="user.isAuthenticated()") Заказы

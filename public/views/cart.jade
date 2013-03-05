@@ -5,7 +5,7 @@ include header
 
     .dishes.dishes-cart
         .dishes-row(data-dishes)
-            .dishes-item(data-dishes-item, data-ng-repeat="dish in cart.all() | filter:category")
+            .dishes-item(data-dishes-item, data-ng-repeat="dish in cart.all()")
                 picture.dishes-item-picture
                     img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
