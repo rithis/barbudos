@@ -44,10 +44,10 @@ include header
 
                 hr.dishes-item-divider
                 p.dishes-item-price
-                    span(data-editable='price') {{ dish.price }} 
+                    span(data-editable='price', data-numerable) {{ dish.price }} 
                     span руб.
                 p.dishes-item-size
-                    span(data-editable='size') {{ dish.size }}
+                    span(data-editable='size', data-numerable) {{ dish.size }}
                     select.dishes-item-size-unit(data-editable='sizeUnit')
                         option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
 
