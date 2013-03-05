@@ -1,4 +1,4 @@
-barbudosApp.controller 'CartCtrl', ($scope, cart, Order) ->
+barbudosApp.controller 'CartCtrl', ($scope, $location, cart, Order) ->
     $scope.cart = cart
 
     $scope.$on 'cart-updated', (e,arg) ->
@@ -13,3 +13,10 @@ barbudosApp.controller 'CartCtrl', ($scope, cart, Order) ->
         order.$save data, ->
             cart.create()
             $scope.order = {}
+
+            alert """
+                Вы оформили заказ. Количество #{cart.count()}.
+                Доставка на адресс #{order.address}.
+                Контактный телефон #{order.phone}.
+            """
+            $location.url '/'
