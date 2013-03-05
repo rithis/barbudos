@@ -15,7 +15,7 @@ include header
         .dishes-row(data-dishes, data-ng-switch-when="false")
             .dishes-item(data-dishes-item, data-ng-repeat="dish in dishes | filter:category")
                 picture.dishes-item-picture
-                    img.dishes-item-picture-image(src="{{ dish.preview }}")
+                    img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
                 h2.dishes-item-title {{ dish.name }}
                 p.dishes-item-description {{ dish.description }}
@@ -37,7 +37,7 @@ include header
         .dishes-row(data-dishes, data-ng-switch-when="true")
             .dishes-item.dishes-item-edit(data-dishes-item, class="{{ !dish._id && 'dishes-item-new' }}", data-ng-repeat="dish in dishes | filter:category")
                 picture.dishes-item-picture
-                    img.dishes-item-picture-image(src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
+                    img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
 
                 h2.dishes-item-title(data-editable='name') {{ dish.name }}
                 p.dishes-item-description(data-editable='description') {{ dish.description }}
