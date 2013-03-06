@@ -8,12 +8,6 @@ describe "barbudos", ->
     before wrapper.loader()
     after wrapper.unloader()
 
-    shouldInclude = (body, name) ->
-        for item in body
-            if item.name is name
-                return
-        throw new Error "expected #{body} should include #{name}"
-
     describe "GET /dishes", ->
         it "should respond with dishes", wrapper.wrap (callback) ->
             req = @get "/dishes"
@@ -22,9 +16,9 @@ describe "barbudos", ->
                 res.should.be.json
                 res.body.should.be.array
                 res.body.should.have.lengthOf 3
-                shouldInclude res.body, "Мясо"
-                shouldInclude res.body, "Молоко"
-                shouldInclude res.body, "Банан"
+                res.body[0].name.should.equal "Мясо"
+                res.body[1].name.should.equal "Молоко"
+                res.body[2].name.should.equal "Банан"
                 callback()
 
     describe "GET /categories", ->
@@ -35,9 +29,9 @@ describe "barbudos", ->
                 res.should.be.json
                 res.body.should.be.array
                 res.body.should.have.lengthOf 3
-                shouldInclude res.body, "Блюда из мяса"
-                shouldInclude res.body, "Напитки"
-                shouldInclude res.body, "Десерты"
+                res.body[0].name.should.equal "Блюда из мяса"
+                res.body[1].name.should.equal "Напитки"
+                res.body[2].name.should.equal "Десерты"
                 callback()
 
     describe "GET /orders", ->
