@@ -1,15 +1,14 @@
 module.exports = (grunt) ->
     grunt.initConfig
         clean:
+            bower: [".components", "public/components"]
             docs: "docs"
         simplemocha:
             integration:
                 src: "test/integration/*.coffee"
-                options: reporter: "spec"
             acceptance:
                 src: "test/acceptance/*.coffee"
-                options: reporter: "spec"
-            options: ignoreLeaks: true
+            options: ignoreLeaks: true, reporter: process.env.REPORTER or "spec"
         coffeelint:
             public: "public/scripts/**/*.coffee"
             test: "test/**/*.coffee"
@@ -21,7 +20,10 @@ module.exports = (grunt) ->
             options: output: "docs"
 
     grunt.registerTask "default", ["clean", "test", "lint", "docs"]
-    grunt.registerTask "test", "simplemocha"
+    grunt.registerTask "test", [
+        "simplemocha:integration"
+        "simplemocha:acceptance"
+    ]
     grunt.registerTask "lint", "coffeelint"
     grunt.registerTask "docs", "docco"
 
