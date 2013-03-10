@@ -17,6 +17,7 @@ container.set "components", [
 
 loader = container.get "loader"
 loader.use symfio.plugins.express
+loader.use symfio.plugins.expressLogger
 loader.use symfio.plugins.assets
 loader.use symfio.plugins.bower
 loader.use symfio.plugins.mongoose
