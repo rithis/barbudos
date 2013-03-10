@@ -83,10 +83,17 @@ dishesDirective.directive "editable", (Dish) ->
   link: (scope, element, attrs) ->
     attrs.$set "contenteditable", "true"
     scope.dish = scope.$parent.dish
+
+    element.bind "keypress", (event) ->
+      if event.keyCode == 13
+        event.preventDefault()
+
+      if attrs.numerable
+        if event.keyCode < 48 or event.keyCode > 57
+          event.preventDefault()
+
     element.bind "blur", ->
       scope.$apply ->
-        if attrs.numerable
-          element.text element.text().replace /\D/g, ""
         if scope.dish._id
           Dish.get dishId: scope.dish._id, (dish) ->
             dish[attrs.editable] = element.val() or element.text()
