@@ -1,40 +1,40 @@
 include header
 
 .cart-layout
-    p.cart-title Ваш заказ
+  p.cart-title Ваш заказ
 
-    .dishes.dishes-cart
-        .dishes-row(data-dishes)
-            .dishes-item(data-dishes-item, data-ng-repeat="dish in cart.all()")
-                picture.dishes-item-picture
-                    img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
+  .dishes.dishes-cart
+    .dishes-row(data-dishes)
+      .dishes-item(data-dishes-item, data-ng-repeat="dish in cart.all()")
+        picture.dishes-item-picture
+          img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
-                h2.dishes-item-title {{ dish.name }}
-                p.dishes-item-description {{ dish.description }}
+        h2.dishes-item-title {{ dish.name }}
+        p.dishes-item-description {{ dish.description }}
 
-                hr.dishes-item-divider
-                p.dishes-item-price {{ dish.price }} руб.
-                p.dishes-item-size <strong>300г.</strong> в порции
+        hr.dishes-item-divider
+        p.dishes-item-price {{ dish.price }} руб.
+        p.dishes-item-size <strong>300г.</strong> в порции
 
-                form.dishes-item-form
-                    hr.dishes-item-divider
-                    .amount(data-amount)
-                        button.button.button-ok.amount-decrease(data-ng-click="decrease()") &#x25c0;
-                        input.amount-input(data-ng-model="amount")
-                        button.button.button-ok.amount-increase(data-ng-click="increase()") &#x25b6;
-                        | &nbsp;=&nbsp;{{ amountPrice }} руб.
-                    button.button.button-cancel(type="submit", data-ng-click="cart.remove(dish.dish)") Убрать из корзины
+        form.dishes-item-form
+          hr.dishes-item-divider
+          .amount(data-amount)
+            button.button.button-ok.amount-decrease(data-ng-click="decrease()") &#x25c0;
+            input.amount-input(data-ng-model="amount")
+            button.button.button-ok.amount-increase(data-ng-click="increase()") &#x25b6;
+            | &nbsp;=&nbsp;{{ amountPrice }} руб.
+          button.button.button-cancel(type="submit", data-ng-click="cart.remove(dish.dish)") Убрать из корзины
 
-    form.cart-form
-        hr.cart-form-divider
-        
-        p.cart-form-total Итого: {{ cart.price() }} руб.
-        hr.cart-form-total-divider
-            
-        label.cart-form-label(for="address") Куда доставить?
-        textarea.cart-form-address#address(data-ng-model="order.address")
-            
-        label.cart-form-label(for="phone") Ваш номер
-        input.cart-form-phone#phone(data-ng-model="order.phone")
-            
-        button.button.button-ok.cart-form-submit(type="submit", data-ng-click="submit(order)") Оформить заказ
+  form.cart-form
+    hr.cart-form-divider
+    
+    p.cart-form-total Итого: {{ cart.price() }} руб.
+    hr.cart-form-total-divider
+      
+    label.cart-form-label(for="address") Куда доставить?
+    textarea.cart-form-address#address(data-ng-model="order.address")
+      
+    label.cart-form-label(for="phone") Ваш номер
+    input.cart-form-phone#phone(data-ng-model="order.phone")
+      
+    button.button.button-ok.cart-form-submit(type="submit", data-ng-click="submit(order)") Оформить заказ

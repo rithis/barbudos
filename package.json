@@ -1,32 +1,32 @@
 {
-    "name": "rithis-barbudos",
-    "version": "0.0.0",
-    "description": "bar-barbudos.ru",
-    "scripts": {
-        "start": "node_modules/.bin/coffee barbudos.coffee",
-        "test": "node_modules/.bin/grunt test"
-    },
-    "dependencies": {
-        "coffee-script": "~1.6",
-        "symfio": "~0.4",
-        "node-uuid": "~1.4"
-    },
-    "devDependencies": {
-        "grunt": "~0.4",
-        "grunt-cli": "~0.1",
-        "grunt-contrib-clean": "~0.4",
-        "grunt-simple-mocha": "~0.3",
-        "grunt-coffeelint": "~0.0",
-        "grunt-docco": "~0.2",
-        "async": "~0.2",
-        "supertest": "~0.5",
-        "zombie": "~1.4",
-        "should": "~1.2",
-        "lodash": "~1.0"
-    },
-    "engines": {
-        "node": "~0.8",
-        "npm": ">=1.1"
-    },
-    "private": true
+  "name": "rithis-barbudos",
+  "version": "0.0.0",
+  "description": "bar-barbudos.ru",
+  "scripts": {
+    "start": "node_modules/.bin/coffee barbudos.coffee",
+    "test": "node_modules/.bin/grunt test"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "symfio": "~0.4",
+    "node-uuid": "~1.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-cli": "~0.1",
+    "grunt-contrib-clean": "~0.4",
+    "grunt-simple-mocha": "~0.3",
+    "grunt-coffeelint": "~0.0",
+    "grunt-docco": "~0.2",
+    "async": "~0.2",
+    "supertest": "~0.5",
+    "zombie": "~1.4",
+    "should": "~1.2",
+    "lodash": "~1.0"
+  },
+  "engines": {
+    "node": "~0.8",
+    "npm": ">=1.1"
+  },
+  "private": true
 }
