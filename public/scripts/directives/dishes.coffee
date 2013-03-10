@@ -100,6 +100,14 @@ dishesDirective.directive "save", (Dish) ->
                 scope.dish = dish
                 scope.$apply()
 
+dishesDirective.directive "autosave", (Dish) ->
+    restrict: "A"
+    link: (scope, element, attrs) ->
+        element.bind 'click', ->
+            Dish.get dishId: scope.dish._id, (dish) ->
+                dish[attrs.autosave] = scope.dish[attrs.autosave]
+                dish.$save dishId: dish._id
+
 dishesDirective.directive 'fileupload', ($window, Dish) ->
     link: (scope, element) ->
         fileupload = $('<input type="file">').fileupload
