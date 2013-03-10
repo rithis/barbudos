@@ -77,12 +77,10 @@ dishesDirective.directive "map", (ymaps) ->
       map.geoObjects.add placemark
 
 
-dishesDirective.directive "editable", (Dish) ->
+dishesDirective.directive "editable", ->
   restrict: "A"
-  scope: {}
   link: (scope, element, attrs) ->
     attrs.$set "contenteditable", "true"
-    scope.dish = scope.$parent.dish
 
     element.bind "keypress", (event) ->
       if event.keyCode == 13
@@ -91,13 +89,6 @@ dishesDirective.directive "editable", (Dish) ->
       if attrs.numerable
         if event.keyCode < 48 or event.keyCode > 57
           event.preventDefault()
-
-    element.bind "blur", ->
-      scope.$apply ->
-        if scope.dish._id
-          Dish.get dishId: scope.dish._id, (dish) ->
-            dish[attrs.editable] = element.val() or element.text()
-            dish.$save dishId: dish._id
 
 
 dishesDirective.directive "save", (Dish) ->
@@ -111,13 +102,24 @@ dishesDirective.directive "save", (Dish) ->
         scope.$apply()
 
 
-dishesDirective.directive "autosave", (Dish) ->
+dishesDirective.directive "dishAutosave", ->
   restrict: "A"
   link: (scope, element, attrs) ->
-    element.bind 'click', ->
-      Dish.get dishId: scope.dish._id, (dish) ->
-        dish[attrs.autosave] = scope.dish[attrs.autosave]
-        dish.$save dishId: dish._id
+    if element.is("input") and element.attr("type") is "checkbox"
+      eventName = "change"
+      getter = -> element.is ":checked"
+
+    else if element.is "select"
+      eventName = "change"
+      getter = -> element.val()
+
+    else if attrs.editable
+      eventName = "blur"
+      getter = -> element.text()
+
+    element.on eventName, ->
+      scope.dish[attrs.dishAutosave] = getter()
+      scope.dish.$save dishId: scope.dish._id
 
 
 dishesDirective.directive "fileupload", ($window, Dish) ->

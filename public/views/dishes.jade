@@ -39,20 +39,20 @@ include header
         picture.dishes-item-picture
           img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
 
-        h2.dishes-item-title(data-editable='name') {{ dish.name }}
-        p.dishes-item-description(data-editable='description') {{ dish.description }}
+        h2.dishes-item-title(data-editable, dish-autosave="name") {{ dish.name }}
+        p.dishes-item-description(data-editable, dish-autosave="description") {{ dish.description }}
   
         label.dish-item-buyable
-          input.dish-item-buyable-checkbox(type="checkbox", ng-model="dish.buyable", data-autosave="buyable")
+          input.dish-item-buyable-checkbox(type="checkbox", dish-autosave="buyable")
           | Есть в доставке
 
         hr.dishes-item-divider
         p.dishes-item-price
-          span(data-editable='price', data-numerable) {{ dish.price }} 
+          span(data-editable, data-numerable, dish-autosave="price") {{ dish.price }} 
           span руб.
         p.dishes-item-size
-          span(data-editable='size', data-numerable) {{ dish.size }}
-          select.dishes-item-size-unit(data-editable='sizeUnit')
+          span(data-editable, data-numerable, dish-autosave="size") {{ dish.size }}
+          select.dishes-item-size-unit(dish-autosave="sizeUnit")
             option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
 
         form.dishes-item-form
