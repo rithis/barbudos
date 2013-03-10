@@ -1,17 +1,17 @@
 .header-layout
-    overflow hidden
-    image "green-background"
+  overflow hidden
+  image "green-background"
 
-    .multiplebgs &
-        background url("/images/green-background-light.png") center no-repeat,
-                   url("/images/green-background.png")
+  .multiplebgs &
+    background url("/images/green-background-light.png") center no-repeat,
+               url("/images/green-background.png")
 
-    @media all and (-webkit-min-device-pixel-ratio: 1.5)
-        .multiplebgs.backgroundsize &
-            background-image url("/images/green-background-light@2x.png"),
-                             url("/images/green-background@2x.png")
-            background-size 688px 174px,
-                            170px 170px
+  @media all and (-webkit-min-device-pixel-ratio: 1.5)
+    .multiplebgs.backgroundsize &
+      background-image url("/images/green-background-light@2x.png"),
+                       url("/images/green-background@2x.png")
+      background-size 688px 174px,
+                      170px 170px
 
-    .header-layout-divider
-        divider "green-to-red-wave"
+  .header-layout-divider
+    divider "green-to-red-wave"

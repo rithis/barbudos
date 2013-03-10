@@ -1,9 +1,5 @@
-libraries = ["Modernizr", "FTScroller", "ymaps"]
-
-defineLibrary = (library) ->
+for library in ["Modernizr", "FTScroller", "ymaps"]
+  do (library) ->
     module = angular.module library, []
     module.factory library, ($window) ->
-        $window[library]
-
-for library in libraries
-    defineLibrary library
+      $window[library]

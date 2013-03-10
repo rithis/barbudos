@@ -1,2 +1,2 @@
-barbudosApp.controller 'OrdersCtrl', ($scope, user, Order) ->
-    $scope.orders = Order.query()
+barbudosApp.controller "OrdersCtrl", ($scope, user, Order) ->
+  $scope.orders = Order.query()
