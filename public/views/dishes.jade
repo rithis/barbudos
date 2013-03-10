@@ -13,7 +13,7 @@ include header
 .dishes.dishes-category
   ng-switch(on="user.isAuthenticated()")
     .dishes-row(data-dishes, data-ng-switch-when="false")
-      .dishes-item(data-dishes-item, data-ng-repeat="dish in dishes | filter:category", ng-class="appliedClasses(dish)")
+      .dishes-item(dish, data-ng-repeat="dish in dishes | filter:category", ng-class="appliedClasses()")
         picture.dishes-item-picture
           img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
@@ -35,7 +35,7 @@ include header
 
 
     .dishes-row(data-dishes, data-ng-switch-when="true")
-      .dishes-item.dishes-item-edit(data-dishes-item, class="{{ !dish._id && 'dishes-item-new' }}", data-ng-repeat="dish in dishes | filter:category")
+      .dishes-item.dishes-item-edit(dish, ng-class="appliedClasses()", data-ng-repeat="dish in dishes | filter:category")
         picture.dishes-item-picture
           img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
 
@@ -43,7 +43,7 @@ include header
         p.dishes-item-description(data-editable, dish-autosave="description") {{ dish.description }}
   
         label.dish-item-buyable
-          input.dish-item-buyable-checkbox(type="checkbox", dish-autosave="buyable")
+          input.dish-item-buyable-checkbox(type="checkbox", ng-checked="dish.buyable", dish-autosave="buyable")
           | Есть в доставке
 
         hr.dishes-item-divider
@@ -55,11 +55,11 @@ include header
           select.dishes-item-size-unit(dish-autosave="sizeUnit")
             option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
 
-        form.dishes-item-form
+        form.dishes-item-form(data-ng-hide="dish._id")
           hr.dishes-item-divider
-          button.button.button-ok(data-save, type="submit", data-ng-click="save()", data-ng-hide="dish._id") Сохранить
+          button.button.button-ok(ng-click="create()", type="submit") Сохранить
 
-      .dishes-item(data-dishes-item, ng-click="add()")
+      .dishes-item.dishes-item-edit(data-dishes-item, ng-click="add()")
         div(style="text-align:center;padding-top: 115px;font:18px 'PT Serif Caption', serif;color: #7c7c7c;")
           span(style="font-size:108px;font-weight:bold;") +
           br

@@ -5,13 +5,6 @@
   .dishes-row
     clearfix()
 
-  .dishes-item-new
-    .dishes-item-title
-      font-style italic
-
-    .dishes-item-description
-      font-style italic
-
   .dishes-item
     float left
     width 240px
@@ -87,6 +80,10 @@
         width 60px
         height 30px
 
+    &.dishes-item-new
+      .dishes-item-title, .dishes-item-description, .dishes-item-price
+        font-style italic
+
   &.dishes-category
     .no-touch & .dishes-item
       height 430px
@@ -95,6 +92,8 @@
         display none
 
       &.dishes-item-edit
+        height 470px
+
         .dishes-item-form
           display block
 

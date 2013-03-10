@@ -91,15 +91,26 @@ dishesDirective.directive "editable", ->
           event.preventDefault()
 
 
-dishesDirective.directive "save", (Dish) ->
+dishesDirective.directive "dish", (Dish) ->
   restrict: "A"
-  scope: {}
   link: (scope, element, attrs) ->
-    scope.dish = scope.$parent.dish
-    scope.save = ->
-      (new Dish scope.dish).$save scope.dish, (dish) ->
-        scope.dish = dish
-        scope.$apply()
+    scope.appliedClasses = ->
+      classes = []
+
+      if scope.dish.buyable and not scope.user.isAuthenticated()
+        classes.push "dishes-item-buyable"
+
+      unless scope.dish._id
+        classes.push "dishes-item-new"
+
+      classes.join " "
+
+    unless scope.dish._id
+      scope.create = ->
+        dish = new Dish scope.dish
+        dish.$save (dish) ->
+          for key, value of dish
+            scope.dish[key] = value
 
 
 dishesDirective.directive "dishAutosave", ->
@@ -119,7 +130,9 @@ dishesDirective.directive "dishAutosave", ->
 
     element.on eventName, ->
       scope.dish[attrs.dishAutosave] = getter()
-      scope.dish.$save dishId: scope.dish._id
+
+      if scope.dish._id
+        scope.dish.$save dishId: scope.dish._id
 
 
 dishesDirective.directive "fileupload", ($window, Dish) ->
