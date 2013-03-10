@@ -13,7 +13,7 @@ include header
 .dishes.dishes-category
     ng-switch(on="user.isAuthenticated()")
         .dishes-row(data-dishes, data-ng-switch-when="false")
-            .dishes-item(data-dishes-item, data-ng-repeat="dish in dishes | filter:category")
+            .dishes-item(data-dishes-item, data-ng-repeat="dish in dishes | filter:category", ng-class="appliedClasses(dish)")
                 picture.dishes-item-picture
                     img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
@@ -24,7 +24,7 @@ include header
                 p.dishes-item-price {{ dish.price }} руб.
                 p.dishes-item-size <strong>{{ dish.size }} {{ dish.sizeUnit }}.</strong> в порции
 
-                form.dishes-item-form
+                form.dishes-item-form(data-ng-show="dish.buyable")
                     hr.dishes-item-divider
                     .amount(data-amount)
                         button.button.button-ok.amount-decrease(data-ng-click="decrease()") &#x25c0;

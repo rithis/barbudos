@@ -97,15 +97,6 @@
             .dishes-item-form
                 display none
 
-            &:hover
-                .dishes-item-picture
-                    height 87px
-                    overflow hidden
-                    border-bottom 1px solid #a8a8a8
-                    box-shadow inset 0 -30px 30px -30px #b5b5b5
-            
-                .dishes-item-form
-                    display block
 
             &.dishes-item-edit
                 .dishes-item-form
@@ -114,11 +105,24 @@
                     .dishes-item-divider
                         margin-bottom 10px
 
+
+            &.dishes-item-buyable
                 &:hover
                     .dishes-item-picture
-                        height 225px
-                        border-bottom none
-                    box-shadow none
+                        height 87px
+                        overflow hidden
+                        border-bottom 1px solid #a8a8a8
+                        box-shadow inset 0 -30px 30px -30px #b5b5b5
+                
+                    .dishes-item-form
+                        display block
+
+                &.dishes-item-edit
+                    &:hover
+                        .dishes-item-picture
+                            height 225px
+                            border-bottom none
+                        box-shadow none
 
     &.dishes-cart
         responsive display table-cell same block

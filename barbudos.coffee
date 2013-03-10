@@ -45,6 +45,7 @@ loader.use (container, callback) ->
             type: "string",
             required: true,
             default: "http://lorempixel.com/300/300/food/1"
+        buyable: type: Boolean, default: true
         category:
             type: mongoose.Schema.Types.ObjectId
             ref: "CategorySchema"

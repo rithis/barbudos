@@ -6,6 +6,9 @@ barbudosApp.controller 'DishesCtrl', ($scope, Dish, cart, user) ->
     $scope.$on 'cart-updated', (e,arg) ->
         $scope.cart = cart
 
+    $scope.appliedClasses = (dish) ->
+        "dishes-item-buyable" if dish.buyable
+
     $scope.add = ->
         $scope.dishes.push new Dish
             name: 'Название'
