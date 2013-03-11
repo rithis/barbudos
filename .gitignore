@@ -13,6 +13,9 @@ public/uploads
 public/component.json
 npm-debug.log
 
+# Ignore config
+config.json
+
 # ignore compiled assets
 *.html
 *.js
