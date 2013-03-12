@@ -76,6 +76,12 @@ loader.use (container, callback) ->
     cart: type: "string", required: true
     address: type: "string", required: true
     phone: type: "string", required: true
+    status:
+      type: "number",
+      required: true,
+      default: 0
+      validate: (value) ->
+        [0,1].indexOf(value) >= 0
 
   Category = connection.model "categories", CategorySchema
   Position = connection.model "positions", PositionSchema
@@ -198,6 +204,8 @@ loader.use (container, callback) ->
   app.get "/orders", isAuthenticated, crud.list(Order).make()
 
   app.post "/orders", postOrderAction
+
+  app.post "/orders/:id", isAuthenticated, crud.put(Order).make()
 
   callback()
 
