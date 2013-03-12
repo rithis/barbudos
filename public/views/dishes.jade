@@ -14,6 +14,8 @@ include header
   ng-switch(on="user.isAuthenticated()")
     .dishes-row(data-dishes, data-ng-switch-when="false")
       .dishes-item(dish, data-ng-repeat="dish in dishes | filter:category", ng-class="appliedClasses()")
+        p.dishes-item-badge(data-ng-show="dish.buyable") Доступно для заказа
+
         picture.dishes-item-picture
           img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
 
