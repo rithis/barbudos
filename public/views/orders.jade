@@ -5,7 +5,9 @@
 
 .orders
   .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders")
-    .orders-item-info(data-ng-click="toggleDetail()")  {{ order.address }}, {{ order.phone }}
+    .orders-item-info(data-ng-click="toggleDetail()")
+      {{ order.address }}, {{ order.phone }}
+      button.orders-item-status(data-ng-show="order.status == 0", data-ng-click="changeStatus(1, $event)") Готово
     .orders-item-detail(data-ng-show="detail")
       .dishes.dishes-category
         .dishes-row(data-dishes)
