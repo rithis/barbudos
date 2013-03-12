@@ -16,6 +16,8 @@ include header
     span Авторизация
 
   form.login-form(name="auth")
+    p(ng-show="invalid") Логин или пароль введены неверно
+
     .login-fields
       div
         input(name="username", placeholder="Логин", data-ng-model="user.username")
