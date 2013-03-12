@@ -1,0 +1,34 @@
+.footer-layout
+  position relative
+  width 100%
+  overflow hidden
+  image "taupe-background"
+
+  responsive height, 80px,
+            same,
+            160px
+
+  responsive margin-top, -80px,
+            same,
+            -160px
+
+  .footer-layout-divider
+    divider "gray-to-taupe"
+
+  .footer-layout-container
+    padding: 15px 90px
+    font-size 16px
+    color white
+
+    clearfix()
+
+    .footer-copyright
+      float left
+      line-height 44px
+
+    .footer-development
+      float right
+
+      .footer-development-text
+        line-height 44px
+        vertical-align top
