@@ -189,7 +189,7 @@ loader.use (container, callback) ->
     else
       res.send 401
 
-  app.get "/dishes", crud.list(Dish).sort(buyable: -1).make()
+  app.get "/dishes", crud.list(Dish).make()
   app.post "/dishes", crud.post(Dish).make()
   app.get "/dishes/:id", crud.get(Dish).make()
   app.post "/dishes/:id", crud.put(Dish).make()

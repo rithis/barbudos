@@ -21,6 +21,9 @@ barbudosApp.controller "DishesCtrl", ($scope, Dish, cart, user) ->
     $scope.dishes.push dish
     $scope.dishesForSave.push dish
 
+  $scope.buyableOrder = (dish) ->
+    not dish.buyable
+
   $scope.saveAll = ->
     for dish in $scope.dishesForSave
       dish.$save()
