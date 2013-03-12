@@ -9,13 +9,19 @@ include header
     | Что закажете?
 
   p.rolled-cart(data-ng-show="user.isAuthenticated()")
+    a.rolled-cart-button.rolled-cart-button-preview(ng-click="edit = false", ng-show="edit")
+      | Предпросмотр
+
+    a.rolled-cart-button.rolled-cart-button-preview(ng-click="edit = true", ng-show="!edit")
+      | Редактирование
+
     a.rolled-cart-button.rolled-cart-button-save(ng-show="dishesForSave.length > 0", ng-click="saveAll()")
       | Сохранить новые позиции
 
   hr.cart-layout-divider
 
 .dishes.dishes-category
-  ng-switch(on="user.isAuthenticated()")
+  ng-switch(on="user.isAuthenticated() && !!edit")
     .dishes-row(data-dishes, data-ng-switch-when="false")
       .dishes-item(dish, data-ng-repeat="dish in dishes | filter:category", ng-class="appliedClasses()")
         p.dishes-item-badge(data-ng-show="dish.buyable") Доступно для заказа
