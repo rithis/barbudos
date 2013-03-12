@@ -1,0 +1,52 @@
+.login-layout
+  max-height 654px
+  overflow hidden
+  image "green-background"
+
+  .multiplebgs &
+    background url("/images/green-login-background-light.png") center no-repeat,
+               url("/images/green-background.png")
+
+  .login-layout-container
+    width 236px
+    margin 0px auto
+    text-align center
+
+    .login-logo
+      responsive margin-top, 25px,
+               same,
+               same
+  
+    .login-welcome
+      text-shadow 0 1px 1px rgba(0,0,0,0.5)
+      font-size 76px
+      color white
+  
+    .login-form
+      width 100%
+      text-align left
+  
+      .login-fields
+        label
+          responsive margin-top, 25px,
+                    same,
+                    same
+
+          text-shadow 0 1px 1px rgba(0,0,0,0.5)
+          font-size 18px
+          color white
+  
+        input
+          width 224px
+          height 30px
+          responsive margin-top, 16px,
+                    same,
+                    same
+
+      .login-submit
+        responsive margin, 40px 0px 80px 0px,
+                  same,
+                  same
+  
+  .login-layout-divider
+    divider "green-to-gray"

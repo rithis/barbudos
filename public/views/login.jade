@@ -1,28 +1,27 @@
-include header
+.login-layout
 
-.cart-layout
-  p.rolled-cart(data-ng-show="cart.count() > 0")
-    | {{ cart.count() }} блюд на {{ cart.price() }} руб.
-    a.rolled-cart-button(href="#!/cart") Корзина
+  .login-layout-container
+    .login-logo
+      a(href="/")
+        img(src="/images/logo.png")
+  
+    .login-welcome
+      Вход
+  
+    form.login-form(name="auth")
+      p(ng-show="invalid") Логин или пароль введены неверно
+  
+      .login-fields
+        div
+          label(for="username") Ваш логин
+          input(name="username", id="username", data-ng-model="user.username")
+        div
+          label(for="password") Пароль
+          input(name="password", id="password", type="password", data-ng-model="user.password")
+  
+      .login-submit
+        button(type="submit", class="button button-ok", data-ng-click="submit()") Войти
 
-  p.rolled-cart(data-ng-show="cart.count() == 0")
-    | Что закажете?
+  hr.login-layout-divider
 
-.login-backdrop
-
-.login-modal
-  .login-title
-    img(src="/images/logo.png", width="100")
-    span Авторизация
-
-  form.login-form(name="auth")
-    p(ng-show="invalid") Логин или пароль введены неверно
-
-    .login-fields
-      div
-        input(name="username", placeholder="Логин", data-ng-model="user.username")
-      div
-        input(name="password", type="password", placeholder="Пароль", data-ng-model="user.password")
-
-    .login-submit
-      button(type="submit", class="button button-ok", data-ng-click="submit()") Войти
+.footer-divider
