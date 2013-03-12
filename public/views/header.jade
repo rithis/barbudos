@@ -10,5 +10,9 @@
     a(href="#!/orders", data-ng-show="user.isAuthenticated()") Заказы
 
     a(href="#!/about") О баре
-        
+
+  .user(ng-show="user.isAuthenticated()")
+    .user-username {{ user.getUsername() }}
+    .user-logout(ng-click="user.logout()") Выйти
+
   hr.header-layout-divider

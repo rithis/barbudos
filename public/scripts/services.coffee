@@ -93,7 +93,7 @@ userServices.factory "user", ($resource, $http, $cookieStore) ->
   setToken = (token) ->
     $http.defaults.headers.common.Authorization = "Token #{token}"
 
-  if $cookieStore.get "token"
+  if $cookieStore.get "username" and $cookieStore.get "token"
     promise = $http.get("/sessions/#{$cookieStore.get "token"}")
     promise.success (data, status) ->
       setToken $cookieStore.get "token" if status is 200
@@ -102,10 +102,18 @@ userServices.factory "user", ($resource, $http, $cookieStore) ->
   isAuthenticated: ->
     $cookieStore.get("token")?
 
+  getUsername: ->
+    $cookieStore.get "username"
+
+  logout: ->
+    $cookieStore.remove "username"
+    $cookieStore.remove "token"
+
   auth: (username, password, callback) ->
     body    = username: username, password: password
     promise = $http.post("/sessions", body)
     promise.success (auth, status) ->
+      $cookieStore.put "username", username
       $cookieStore.put "token", auth.token if auth.token
       setToken auth.token
       callback(auth.token) if callback
