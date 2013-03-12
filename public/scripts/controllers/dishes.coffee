@@ -12,5 +12,6 @@ barbudosApp.controller "DishesCtrl", ($scope, Dish, cart, user) ->
       description: "Описание"
       price: 0
       size: 0
+      preview: "/images/no-photo@2x.png"
       buyable: true
       category: $scope.category

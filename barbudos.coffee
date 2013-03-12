@@ -45,7 +45,7 @@ loader.use (container, callback) ->
     preview:
       type: "string",
       required: true,
-      default: "http://lorempixel.com/300/300/food/1"
+      default: "/images/no-photo@2x.png"
     buyable: type: Boolean, default: true
     category:
       type: mongoose.Schema.Types.ObjectId
@@ -60,7 +60,7 @@ loader.use (container, callback) ->
     preview:
       type: "string",
       required: true,
-      default: 'http://lorempixel.com/300/300/food/1'
+      default: '/images/no-photo@2x.png'
     category:
       type: mongoose.Schema.Types.ObjectId
       ref: 'CategorySchema'
