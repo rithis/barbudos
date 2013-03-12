@@ -26,6 +26,10 @@
       font-style italic
       color white
 
+      .dish-item-badge-checkbox
+        display inline-block
+        margin-right 10px
+
     .dishes-item-picture
       display block
       
@@ -42,16 +46,10 @@
       font-weight normal
 
     .dishes-item-description
+      height 60px
       margin 5px 20px 15px
       sans-serif 16px
       color #7c7c7c
-
-    .dish-item-buyable
-      margin 10px 20px
-
-      .dish-item-buyable-checkbox
-        display inline-block
-        margin-right 5px
 
     .dishes-item-divider
       width 200px
@@ -97,14 +95,12 @@
 
   &.dishes-category
     .no-touch & .dishes-item
-      height 430px
+      height 400px
 
       .dishes-item-form
         display none
 
       &.dishes-item-edit
-        height 470px
-
         .dishes-item-form
           display block
 
