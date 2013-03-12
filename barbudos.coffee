@@ -1,7 +1,15 @@
-symfio = require "symfio"
-uuid   = require "node-uuid"
+plugins = require "./lib/plugins"
+symfio  = require "symfio"
+nconf   = require "nconf"
+uuid    = require "node-uuid"
 
+
+nconf.env("__").file "local", "#{__dirname}/config.json"
 container = symfio "barbudos", __dirname
+container.set "sms24x7 username", nconf.get "sms24x7:username"
+container.set "sms24x7 password", nconf.get "sms24x7:password"
+container.set "sms24x7 callback", nconf.get "sms24x7:callback"
+container.set "admin phones", nconf.get "notification:phones"
 container.set "components", [
   "angular#~1.0",
   "angular-resource#~1.0",
@@ -23,6 +31,7 @@ loader.use symfio.plugins.bower
 loader.use symfio.plugins.mongoose
 loader.use symfio.plugins.auth
 loader.use symfio.plugins.uploads
+loader.use plugins.sms
 
 loader.use (container, callback) ->
   connection = container.get "connection"
@@ -95,8 +104,10 @@ loader.use symfio.plugins.fixtures
 loader.use symfio.plugins.crud
 
 loader.use (container, callback) ->
+  smsFactory = container.get "sms"
   connection = container.get "connection"
   unloader   = container.get "unloader"
+  phones     = container.get "admin phones", []
   crud       = container.get "crud"
   app        = container.get "app"
 
@@ -177,11 +188,18 @@ loader.use (container, callback) ->
       data.cart = cart.uuid
 
       order = new Order data
-      order.save (err, order) ->
-        if err
-          return res.send 500
+      order.save (err) ->
+        return res.send 500 if err
 
-        res.send order
+        sms = smsFactory.create()
+        return res.send order unless sms
+
+        sms.on "complete", ->
+          res.send order
+
+        sms.send """
+          Новый заказ.
+        """, phones, order.cart
 
   isAuthenticated = (req,res,next) ->
     if req.user

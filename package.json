@@ -9,7 +9,10 @@
   "dependencies": {
     "coffee-script": "~1.6",
     "symfio": "~0.4",
-    "node-uuid": "~1.4"
+    "node-uuid": "~1.4",
+    "superagent": "~0.12",
+    "lodash": "~1.0",
+    "nconf": "~0.6"
   },
   "devDependencies": {
     "grunt": "~0.4",
@@ -21,8 +24,7 @@
     "async": "~0.2",
     "supertest": "~0.5",
     "zombie": "~1.4",
-    "should": "~1.2",
-    "lodash": "~1.0"
+    "should": "~1.2"
   },
   "engines": {
     "node": "~0.8",
