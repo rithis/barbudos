@@ -68,8 +68,5 @@ include header
           select.dishes-item-size-unit(dish-autosave="sizeUnit")
             option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
 
-      .dishes-item.dishes-item-edit(data-dishes-item, ng-click="add()")
-        div(style="text-align:center;padding-top: 115px;font:18px 'PT Serif Caption', serif;color: #7c7c7c;")
-          span(style="font-size:108px;font-weight:bold;") +
-          br
-          span(style="") Добавить
+      .dishes-item.dishes-item-add(data-dishes-item, ng-click="add()")
+        p.dishes-item-add-text Добавить блюдо

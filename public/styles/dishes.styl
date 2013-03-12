@@ -16,9 +16,8 @@
     color black
 
     .dishes-item-badge
-      position absolute
-      width 240px
-      margin 0
+      height 24px
+      margin 0 0 -24px 0
       padding 2px
       image "green-background"
       text-align center
@@ -92,6 +91,23 @@
     &.dishes-item-new
       .dishes-item-title, .dishes-item-description, .dishes-item-price
         font-style italic
+
+    &.dishes-item-add
+      width 236px !important
+      height 396px !important
+      border 2px dashed white
+      image "add-new"
+      background-color transparent
+      background-repeat no-repeat
+      background-position 50% 150px
+      box-shadow none
+      text-align center
+      serif 18px
+      color white
+      cursor pointer
+
+      .dishes-item-add-text
+        margin-top 250px
 
   &.dishes-category
     .no-touch & .dishes-item

@@ -26,7 +26,8 @@ dishesDirective.directive "dishes", ($window, Modernizr, FTScroller) ->
     if Modernizr.touch and not Modernizr.testAllProps("overflowScrolling")
       new FTScroller element.parent()[0], scrollbars: false
 
-    $window.onresize()
+    # ugly hack
+    setTimeout $window.onresize.bind($window), 100
 
 
 dishesDirective.directive "amount", (cart) ->
