@@ -12,3 +12,8 @@ ordersDirective.directive "order", (Cart) ->
       if scope.detail and !scope.cart
         Cart.get cartId: scope.order.cart, (cart) ->
           scope.cart = cart
+
+    scope.changeStatus = (status, $event) ->
+      $event.stopPropagation()
+      scope.order.status = status
+      scope.order.$save orderId: scope.order._id
