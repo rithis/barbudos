@@ -1,22 +1,45 @@
 .header-layout
-  a.logo.logo-center(href="/#!/") Кафе-бар &laquo;Барбудос&raquo;
+  a.logo.logo-left(href="#!/") Кафе-бар &laquo;Барбудос&raquo;
+        
+  h1.title Заказы
 
-  hr.header-layout-divider
+  nav.categories-list
+    a.button.button-ok.categories-list-item(data-ng-repeat="status in statuses", data-ng-click="change(status.status)", class="{{status.status == current && 'categories-list-item-current'}}") {{ status.name }}
+
+  span.header-links
+    a(href="#!/") Меню
+
+  .user(ng-show="user.isAuthenticated()")
+    .user-username {{ user.getUsername() }}
+    .user-logout(ng-click="user.logout()") Выйти
+
+  hr.order-header-layout-divider
+
+.filter-layout(data-ng-show="current == 1")
+  .rolled-filter
+    | За период c 
+    input(type="text", data-datepicker, data-ng-model="date.from")
+    a.button.button-ok.filter-layout-picker ▾
+    |  по 
+    input(type="text", data-datepicker, data-ng-model="date.to")
+    a.button.button-ok.filter-layout-picker ▾
+
+  hr.filter-layout-divider
 
 .orders
-  .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders")
-    .orders-item-info(data-ng-click="toggleDetail()")
-      {{ order.address }}, {{ order.phone }}
-      button.orders-item-status(data-ng-show="order.status == 0", data-ng-click="changeStatus(1, $event)") Готово
-    .orders-item-detail(data-ng-show="detail")
-      .dishes.dishes-category
-        .dishes-row(data-dishes)
-          .dishes-item(data-dishes-item, data-ng-repeat="position in cart.positions")
-            picture.dishes-item-picture
-              img.dishes-item-picture-image(data-ng-src="{{ position.preview }}")
+  .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders | filter:{status:current}")
+    .order-item-cell.order-item-id {{ order._id }}
+    .order-item-cell.order-item-phone {{ order.phone }}
+    .order-item-cell.order-item-address {{ order.address }}
+    .order-item-cell.order-item-positions
+      .order-item-positions-item(data-ng-repeat="position in order.positions")
+        strong.order-item-black-text {{ position.name }}    
+        {{ position.count }} порции 
+        &#8212; 
+        span.order-item-black-text
+          i {{ position.count * position.price }}р.
+    .order-item-cell.order-item-price
+      strong &#61; {{ fullPrice(order.positions) }}р.
+      button.button.button-ok(data-ng-show="order.status == 0", data-ng-click="changeStatus(1)") Завершить
 
-              h2.dishes-item-title {{ position.name }}
-              p.dishes-item-description {{ position.description }}
-
-              hr.dishes-item-divider
-              p.dishes-item-price {{ position.price }} руб.
+.footer-divider

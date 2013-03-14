@@ -12,7 +12,8 @@ container.set "components", [
   "ftscroller#~0.2",
   "jquery#~1.9",
   "jquery.ui#~1.9",
-  "jquery-file-upload#~7.2"
+  "jquery-file-upload#~7.2",
+  "semantic-grid"
 ]
 
 loader = container.get "loader"
@@ -76,6 +77,8 @@ loader.use (container, callback) ->
     cart: type: "string", required: true
     address: type: "string", required: true
     phone: type: "string", required: true
+    createdAt: type: Date, default: Date.now
+    positions: [PositionSchema]
     status:
       type: "number",
       required: true,
@@ -173,8 +176,9 @@ loader.use (container, callback) ->
       unless cart
         return res.send 404
 
-      data      = req.query
-      data.cart = cart.uuid
+      data           = req.query
+      data.positions = cart.positions
+      data.cart      = cart.uuid
 
       order = new Order data
       order.save (err, order) ->
@@ -182,6 +186,21 @@ loader.use (container, callback) ->
           return res.send 500
 
         res.send order
+
+  getOrderAction = (req, res) ->
+    query = req.query
+    params =
+      status: query.status
+
+    if query.from and query.to
+      params.createdAt =
+        "$gte": new Date query.from
+        "$lt": new Date query.to
+
+    Order.find params, (err, orders) ->
+      return res.send 500 if err
+      
+      res.send orders
 
   isAuthenticated = (req,res,next) ->
     if req.user
@@ -201,7 +220,7 @@ loader.use (container, callback) ->
   app.post "/carts", postCartAction
   app.post "/carts/:id/positions", postCartPositionAction
 
-  app.get "/orders", isAuthenticated, crud.list(Order).make()
+  app.get "/orders", isAuthenticated, getOrderAction
 
   app.post "/orders", postOrderAction
 

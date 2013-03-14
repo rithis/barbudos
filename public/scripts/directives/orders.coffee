@@ -6,14 +6,29 @@ ordersDirective.directive "order", (Cart) ->
   link: (scope, element, attrs) ->
     scope.detail = false
     scope.order  = scope.$parent.order
-    
-    scope.toggleDetail = ->
-      scope.detail = !scope.detail
-      if scope.detail and !scope.cart
-        Cart.get cartId: scope.order.cart, (cart) ->
-          scope.cart = cart
 
-    scope.changeStatus = (status, $event) ->
-      $event.stopPropagation()
+    scope.changeStatus = (status) ->
       scope.order.status = status
       scope.order.$save orderId: scope.order._id
+      
+    scope.fullPrice = (positions) ->
+      price = 0
+      positions.forEach (position) ->
+        price += position.price
+      price
+
+ordersDirective.directive "datepicker", (Cart, $parse) ->
+  restrict: "A"
+  scope: {}
+  link: (scope, element, attrs) ->
+    ngModel = $parse attrs.ngModel
+    $ ->
+      element.datepicker
+        inline: true
+        dateFormat: "dd MM yy"
+        onSelect: (dateText, inst) ->
+          scope.$apply (scope) ->
+            ngModel.assign scope.$parent, element.datepicker "getDate"
+            scope.$parent.change scope.$parent.current
+
+    element.next().on "click", -> element.datepicker "show"

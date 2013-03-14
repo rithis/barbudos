@@ -1,14 +1,73 @@
+@import "./../components/semantic-grid/stylesheets/styl/grid"
+
 .orders
-  padding 30px 20px
+  color #4A4A4A
+  responsive margin, 30px 75px 20px 75px,
+            20px 45px 20px 45px,
+            20px 15px 10px 15px
 
   .orders-item
+    border-bottom 1px solid #9b9b9b
+    position relative
+    clearfix()
 
-    .orders-item-info
-      margin-bottom 2px
-      padding 15px
-      background #f6f6f6
-      box-shadow 0 3px 10px 0 rgba(0, 0, 0, .6)
+    .order-item-id
+      column(1)
 
-      .orders-item-status
-        float right
-        margin-right 15px
+    .order-item-phone
+      column(2)
+  
+    .order-item-address
+      column(3)
+
+    .order-item-positions
+      column(5)
+
+    .order-item-price
+      column(1)
+
+      .button
+        padding 4px 0px
+  
+    .order-item-cell
+      padding 30px 30px 20px 0px
+      margin-left 0px
+
+      responsive word-wrap, break-word,
+                same,
+                normal
+  
+      &:first-child:before
+        content ""
+        width 5px
+        height 5px
+        background #9b9b9b
+        border-radius 2px
+        position absolute
+        bottom -3px
+  
+      &:last-child:after
+        content ""
+        width 5px
+        height 5px
+        background #9b9b9b
+        border-radius 2px
+        position absolute
+        bottom -3px
+        right 0px
+
+    &:last-child
+      border-bottom none
+
+      .order-item-cell
+        &:first-child:before
+          display none
+
+        &:last-child:after
+          display none
+
+    .order-item-black-text
+        color #000
+
+.order-header-layout-divider
+  divider "green-to-taupe"

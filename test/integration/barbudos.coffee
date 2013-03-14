@@ -44,7 +44,7 @@ describe "barbudos", ->
 
     it "should respond with orders if token is provided",
       wrapper.wrap (callback) ->
-        req = @get "/orders"
+        req = @get "/orders?status=0"
         req.set "Authorization", "Token token"
         req.end (err, res) ->
           res.should.have.status 200
