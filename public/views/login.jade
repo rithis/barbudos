@@ -9,15 +9,15 @@
       Вход
   
     form.login-form(name="auth")
-      p(ng-show="invalid") Логин или пароль введены неверно
+      p.login-invalid-message(data-notify) Логин или пароль введены неверно
   
       .login-fields
         div
           label(for="username") Ваш логин
-          input(name="username", id="username", data-ng-model="user.username")
+          input(name="username", id="username", data-ng-model="user.username", class="{{ invalid && 'login-fields-invalid' }}")
         div
           label(for="password") Пароль
-          input(name="password", id="password", type="password", data-ng-model="user.password")
+          input(name="password", id="password", type="password", data-ng-model="user.password", class="{{ invalid && 'login-fields-invalid' }}")
   
       .login-submit
         button(type="submit", class="button button-ok", data-ng-click="submit()") Войти

@@ -25,6 +25,20 @@
     .login-form
       width 100%
       text-align left
+
+      .login-invalid-message
+        position absolute
+        top 0px
+        left 50%
+        display none
+        padding 8px
+        margin-left -160px
+        border-radius 6px
+        background #E8564A
+        text-align center
+        font-size 18px
+        font-style italic
+        color #fff
   
       .login-fields
         label
@@ -37,16 +51,48 @@
           color white
   
         input
+          position relative
           width 224px
           height 30px
+          border 1px solid #a7b753
           responsive margin-top, 16px,
                     same,
                     same
+
+          &.login-fields-invalid
+            border 1px solid #E8564A
 
       .login-submit
         responsive margin, 40px 0px 80px 0px,
                   same,
                   same
-  
+
   .login-layout-divider
     divider "green-to-gray"
+
+@media all and (max-width: 1024px)
+  .login-layout
+    position absolute
+    width 100%
+    min-height 100%
+
+    .multiplebgs &
+      background url("/images/green-login-background-light-1024.png") center no-repeat,
+                 url("/images/green-background.png")
+
+    .login-layout-divider
+      display none
+
+@media all and (max-width: 768px)
+  .login-layout
+
+    .multiplebgs &
+      background url("/images/green-login-background-light-768.png") center no-repeat,
+                 url("/images/green-background.png")
+
+  .footer-divider
+    padding 80px
+
+@media all and (max-width: 640px)
+  .login-layout
+    position relative

@@ -5,7 +5,8 @@ window.barbudosApp = angular.module "barbudosApp", [
   "ordersServices",
   "userServices",
   "dishesDirective",
-  "ordersDirective"
+  "ordersDirective",
+  "loginDirective"
 ]
 
 
