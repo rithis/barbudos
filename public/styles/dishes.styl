@@ -6,6 +6,7 @@
     clearfix()
 
   .dishes-item
+    position relative
     float left
     width 240px
     margin 8px
@@ -14,6 +15,12 @@
     box-shadow 0 3px 10px 0 rgba(0, 0, 0, .6)
     text-shadow none
     color black
+
+    .dishes-item-delete
+      position absolute
+      top -3px
+      left -3px
+      cursor pointer
 
     .dishes-item-badge
       height 20px
@@ -29,6 +36,8 @@
         margin-right 10px
 
     .dishes-item-picture
+      position relative
+      margin 0px
       display block
       
       .dishes-item-picture-image
@@ -38,14 +47,61 @@
         margin 20px 20px 10px
         outline 1px solid #a8a8a8
 
+      .dishes-item-picture-add
+        image "dish-preview-editable"
+        background-repeat no-repeat
+        background-position 50% 75px
+        text-align center
+        color #92AB37
+        cursor pointer
+
+        .dishes-item-picture-add-text
+          padding-top 125px
+
+      .dishes-item-picture-editable
+        position absolute
+        right 20px
+        padding 13px
+        image "dish-editable-hover"
+        background-color #a3b54f
+        background-repeat no-repeat
+        background-position 50%
+        z-index 2
+
+      .dishes-item-picture-hover
+        position absolute
+        z-index 1
+        display none
+        margin 0px 0px 0px 20px
+        image "dish-preview-editable"
+        background-color rgba(163, 181, 79, 0.7)
+        background-repeat no-repeat
+        background-position 50% 75px
+        text-align center
+        color #fff
+        cursor pointer
+
+        .dishes-item-picture-add-text
+          padding-top 125px
+
+      &:hover
+        .dishes-item-picture-hover
+          display block
+
+        .dishes-item-picture-editable
+          background-color transparent
+          
+
     .dishes-item-title
-      margin 5px 20px
-      serif 18px
+      padding 0px 20px
+      margin 0px
+      font-size 18px
       font-weight normal
 
     .dishes-item-description
       height 60px
-      margin 5px 20px 15px
+      padding 0px 20px
+      margin 5px 0px 15px 0px
       sans-serif 16px
       color #7c7c7c
 
@@ -58,7 +114,7 @@
     .dishes-item-price
       margin 5px 0 3px
       text-align center
-      serif 24px
+      font-size 24px
 
     .dishes-item-size
       margin 3px 0 10px
@@ -87,9 +143,23 @@
         width 60px
         height 30px
 
-    &.dishes-item-new
-      .dishes-item-title, .dishes-item-description, .dishes-item-price
-        font-style italic
+    .dishes-item-editable
+      &:after
+        content ""
+        position absolute
+        right 3px
+        margin-top 3px
+        width 15px
+        height 15px
+        image "dish-editable"
+        background-repeat no-repeat
+
+      &:hover
+        background #a3b54f
+        color #fff
+
+        &:after
+          image "dish-editable-hover"
 
     &.dishes-item-add
       width 236px !important

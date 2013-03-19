@@ -113,7 +113,6 @@ dishesDirective.directive "dish", (Dish) ->
           for key, value of dish
             scope.dish[key] = value
 
-
 dishesDirective.directive "dishAutosave", ->
   restrict: "A"
   link: (scope, element, attrs) ->

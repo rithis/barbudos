@@ -27,7 +27,7 @@ include header
         p.dishes-item-badge(data-ng-show="dish.buyable") Доступно для заказа
 
         picture.dishes-item-picture
-          img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}")
+          img.dishes-item-picture-image(data-ng-src="{{ dish.preview || '/images/no-photo@2x.png' }}")
 
         h2.dishes-item-title {{ dish.name }}
         p.dishes-item-description {{ dish.description }}
@@ -49,21 +49,28 @@ include header
 
     .dishes-row(data-dishes, data-ng-switch-when="true")
       .dishes-item.dishes-item-edit(dish, ng-class="appliedClasses()", data-ng-repeat="dish in dishes | filter:category")
+        img.dishes-item-delete(data-ng-src="/images/dish-delete.png", data-ng-click="delete(dish)")
         label.dishes-item-badge
           input.dish-item-badge-checkbox(type="checkbox", ng-checked="dish.buyable", dish-autosave="buyable")
           | Доступно для заказа
 
         picture.dishes-item-picture
-          img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}", data-fileupload, data-ng-click="add()")
+          span.dishes-item-picture-editable(data-ng-hide="!dish.preview")
+          div.dishes-item-picture-image.dishes-item-picture-hover(data-fileupload, data-ng-click="add()", data-ng-hide="!dish.preview")
+            p.dishes-item-picture-add-text Изменить фото
+  
+          img.dishes-item-picture-image(data-ng-src="{{ dish.preview }}", data-fileupload, data-ng-click="add()", data-ng-show="dish.preview")
+          div.dishes-item-picture-image.dishes-item-picture-add(data-fileupload, data-ng-click="add()", data-ng-hide="dish.preview")
+            p.dishes-item-picture-add-text Добавить фото
 
-        h2.dishes-item-title(data-editable, dish-autosave="name") {{ dish.name }}
-        p.dishes-item-description(data-editable, dish-autosave="description") {{ dish.description }}
+        h2.dishes-item-title.dishes-item-editable(data-editable, dish-autosave="name") {{ dish.name }}
+        p.dishes-item-description.dishes-item-editable(data-editable, dish-autosave="description") {{ dish.description }}
 
         hr.dishes-item-divider
-        p.dishes-item-price
+        p.dishes-item-price.dishes-item-editable
           span(data-editable, data-numerable, dish-autosave="price") {{ dish.price }} 
           span руб.
-        p.dishes-item-size
+        p.dishes-item-size.dishes-item-editable
           span(data-editable, data-numerable, dish-autosave="size") {{ dish.size }}
           select.dishes-item-size-unit(dish-autosave="sizeUnit")
             option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}

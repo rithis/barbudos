@@ -11,7 +11,7 @@ container.set "components", [
   "modernizr#~2.6",
   "ftscroller#~0.2",
   "jquery#~1.9",
-  "jquery.ui#~1.9",
+  "jquery-ui#~1.9",
   "jquery-file-upload#~7.2",
   "semantic-grid"
 ]
@@ -212,6 +212,7 @@ loader.use (container, callback) ->
   app.post "/dishes", crud.post(Dish).make()
   app.get "/dishes/:id", crud.get(Dish).make()
   app.post "/dishes/:id", crud.put(Dish).make()
+  app.delete "/dishes/:id", isAuthenticated, crud.delete(Dish).make()
 
   app.get "/categories", crud.list(Category).make()
   app.post "/categories", crud.post(Category).make()

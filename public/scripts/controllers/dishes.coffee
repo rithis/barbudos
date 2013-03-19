@@ -10,16 +10,23 @@ barbudosApp.controller "DishesCtrl", ($scope, Dish, cart, user) ->
 
   $scope.add = ->
     dish = new Dish
-      name: "Название"
-      description: "Описание"
-      price: 0
-      size: 0
-      preview: "/images/no-photo@2x.png"
+      name: "Добавить название"
+      description: "Добавить описание"
+      price: "Цена"
+      size: "Кол-во в порции"
       buyable: true
       category: $scope.category
 
     $scope.dishes.push dish
     $scope.dishesForSave.push dish
+
+  $scope.delete = (dish) ->
+    if dish._id
+      return unless confirm "Вы уверены что хотите удалить?"
+      dish.$delete dishId: dish._id
+    else
+      $scope.dishes.splice $scope.dishes.indexOf(dish), 1
+      $scope.dishesForSave.splice $scope.dishesForSave.indexOf(dish), 1
 
   $scope.buyableOrder = (dish) ->
     not dish.buyable

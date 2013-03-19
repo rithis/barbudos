@@ -3,13 +3,13 @@
         
   h1.title Меню
 
+  a.header-orders-link(href="#!/orders", data-ng-show="user.isAuthenticated()") Заказы
+
   nav.categories-list(ng-controller="CategoriesCtrl")
     a.button.button-ok.categories-list-item(data-ng-repeat="category in categories", data-ng-click="setActive(category._id)", class="{{category._id == active && 'categories-list-item-current'}}", data-ng-hide="location.path() == '/cart'") {{ category.name }}
 
   span.header-links
-    a(href="#!/orders", data-ng-show="user.isAuthenticated()") Заказы
-
-    a(href="#!/about") О баре
+    a(href="#!/about", data-ng-hide="user.isAuthenticated()") О баре
 
   .user(ng-show="user.isAuthenticated()")
     .user-username {{ user.getUsername() }}
