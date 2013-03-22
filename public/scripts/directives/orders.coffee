@@ -23,7 +23,6 @@ ordersDirective.directive "order", (Cart) ->
         orderScope.$parent.detail = order
       else
         orderScope.detail = order
-        
 
 
 ordersDirective.directive "detail", ->
