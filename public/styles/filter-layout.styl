@@ -22,5 +22,22 @@
       padding 4px 10px
       border-radius 0px 6px 6px 0px
 
+    .filter-divider
+      display none
+      text-shadow none
+      color #4a4a4a
+
   .filter-layout-divider
     divider "taupe-to-gray"
+
+@media all and (max-width: 640px)
+  .filter-layout
+    .rolled-filter
+      span
+        display none
+
+      .filter-divider
+        display inline
+
+      input
+        width 130px

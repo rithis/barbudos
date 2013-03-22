@@ -16,9 +16,12 @@
     divider "gray-to-taupe"
 
   .footer-layout-container
-    padding: 15px 90px
     font-size 16px
     color white
+
+    responsive padding, 15px 90px,
+              same,
+              15px 20px
 
     clearfix()
 
@@ -37,3 +40,10 @@
   responsive padding-bottom, 100px,
             same,
             180px
+
+@media all and (max-width: 640px)
+  .footer-layout
+    .footer-layout-container
+      .footer-development-text
+        display none
+

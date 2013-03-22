@@ -13,9 +13,30 @@ ordersDirective.directive "order", (Cart) ->
       
     scope.fullPrice = (positions) ->
       price = 0
-      positions.forEach (position) ->
+      positions and positions.forEach (position) ->
         price += position.price
       price
+
+    scope.showDetail = (order) ->
+      orderScope = scope.$parent.$parent
+      if orderScope.$parent.current?
+        orderScope.$parent.detail = order
+      else
+        orderScope.detail = order
+        
+
+
+ordersDirective.directive "detail", ->
+  restrict: "A"
+  link: (scope, element, attrs) ->
+    scope.hideDetail = ->
+      scope.detail = false
+
+    scope.changeStatus = (status) ->
+      scope.detail.status = status
+      scope.detail.$save orderId: scope.detail._id, ->
+        scope.detail = false
+
 
 ordersDirective.directive "datepicker", (Cart, $parse) ->
   restrict: "A"
@@ -32,3 +53,4 @@ ordersDirective.directive "datepicker", (Cart, $parse) ->
             scope.$parent.change scope.$parent.current
 
     element.next().on "click", -> element.datepicker "show"
+    element.attr 'value', 'sdklfjlskdjf'

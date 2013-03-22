@@ -96,6 +96,7 @@
       padding 0px 20px
       margin 0px
       font-size 18px
+      font-family "PT Serif Caption", serif
       font-weight normal
 
     .dishes-item-description
@@ -114,6 +115,7 @@
     .dishes-item-price
       margin 5px 0 3px
       text-align center
+      font-family "PT Serif Caption", serif
       font-size 24px
 
     .dishes-item-size
@@ -123,12 +125,53 @@
       font-style italic
       color #7c7c7c
 
+      &.dishes-item-editable
+        text-align left
+        &:hover
+          background #ffff
+
+          &:after
+            image "dish-editable"
+
+          .dishes-item-size-item
+            background #a3b54f
+
       strong
         font-weight normal
         color black
 
-    .dishes-item-size-unit
-      margin-left: 10px
+      .dishes-item-size-item
+        display inline-block
+        width 125px
+        padding 0px 10px
+        text-align right
+
+      .dishes-item-size-unit
+        margin-right 10px
+
+        .select2-container
+          width 60px
+          margin-left 8px
+  
+          .select2-choice
+            height 18px
+            background none
+            box-shadow inset 0px 1px 3px rgba(0, 0, 0, 0.5)
+  
+            span
+              line-height 18px
+  
+            div
+              border-left 1px solid #7F8F31
+              background-image linear-gradient(top, #BAC56A, #8EA635)
+  
+              b
+                width 0
+                height 0
+                border-left 4px solid transparent
+                border-right 4px solid transparent
+                border-top 6px solid #fff
+                margin 6px 0px 0px 5px
 
     .dishes-item-form
       width 200px

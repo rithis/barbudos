@@ -113,6 +113,7 @@ dishesDirective.directive "dish", (Dish) ->
           for key, value of dish
             scope.dish[key] = value
 
+
 dishesDirective.directive "dishAutosave", ->
   restrict: "A"
   link: (scope, element, attrs) ->
@@ -120,7 +121,7 @@ dishesDirective.directive "dishAutosave", ->
       eventName = "change"
       getter = -> element.is ":checked"
 
-    else if element.is "select"
+    else if attrs.select
       eventName = "change"
       getter = -> element.val()
 
@@ -133,6 +134,34 @@ dishesDirective.directive "dishAutosave", ->
 
       if scope.dish._id
         scope.dish.$save dishId: scope.dish._id
+
+    if attrs.editable
+      element.on "focus", (e) ->
+        return if scope.dish._id
+        setTimeout ->
+          if window.getSelection && document.createRange
+            range = document.createRange()
+            range.selectNodeContents element[0]
+            selection = window.getSelection()
+            selection.removeAllRanges()
+            selection.addRange range
+          else
+            range = document.body.createTextRange()
+            range.moveToElementText element[0]
+            range.select()
+        , 10
+
+
+dishesDirective.directive "select", ->
+  restrict: "A"
+  link: (scope, element, attrs) ->
+    data = []
+    ["гр", "мл", "шт"].forEach (item) ->
+      data.push id: item, text: item
+    element.select2
+      minimumResultsForSearch: -1
+      data: data
+    element.select2 "val", scope.dish.sizeUnit or data[0].id
 
 
 dishesDirective.directive "fileupload", ($window, Dish) ->

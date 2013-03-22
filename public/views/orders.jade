@@ -17,29 +17,67 @@
 
 .filter-layout(data-ng-show="current == 1")
   .rolled-filter
-    | За период c 
+    span За период c 
     input(type="text", data-datepicker, data-ng-model="date.from")
     a.button.button-ok.filter-layout-picker ▾
-    |  по 
+    span  по 
+    span.filter-divider  &#8212; 
     input(type="text", data-datepicker, data-ng-model="date.to")
     a.button.button-ok.filter-layout-picker ▾
 
   hr.filter-layout-divider
 
-.orders
+.orders(data-ng-show="!detail && current == 0")
   .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders | filter:{status:current}")
-    .order-item-cell.order-item-id {{ order._id }}
+    .order-item-cell.order-item-id № {{ order.num }}
     .order-item-cell.order-item-phone {{ order.phone }}
     .order-item-cell.order-item-address {{ order.address }}
     .order-item-cell.order-item-positions
       .order-item-positions-item(data-ng-repeat="position in order.positions")
-        strong.order-item-black-text {{ position.name }}    
-        {{ position.count }} порции 
-        &#8212; 
-        span.order-item-black-text
-          i {{ position.count * position.price }}р.
+        strong.order-item-position-name.order-item-black-text {{ position.name }}    
+        span.order-item-position-count {{ position.count }} порции &#8212; 
+          span.order-item-black-text
+            i {{ position.count * position.price }}р.
+      button.button.button-detail.order-item-detail(data-ng-click="showDetail(order)") Детали &rarr;
     .order-item-cell.order-item-price
-      strong &#61; {{ fullPrice(order.positions) }}р.
+      strong &#61; {{ order && fullPrice(order.positions) }}р.
       button.button.button-ok(data-ng-show="order.status == 0", data-ng-click="changeStatus(1)") Завершить
+
+.orders(data-ng-show="!detail && current == 1")
+  .order-item-by-date(data-ng-repeat="(date, orders) in groupedOrders")
+    .orders-item-date {{ date }}
+    .orders-item(data-orders-item, data-order, data-ng-repeat="order in orders")
+      .order-item-cell.order-item-id № {{ order.num }}
+      .order-item-cell.order-item-phone {{ order.phone }}
+      .order-item-cell.order-item-address {{ order.address }}
+      .order-item-cell.order-item-positions
+        .order-item-positions-item(data-ng-repeat="position in order.positions")
+          strong.order-item-position-name.order-item-black-text {{ position.name }}    
+          span.order-item-position-count {{ position.count }} порции &#8212; 
+            span.order-item-black-text
+              i {{ position.count * position.price }}р.
+        button.button.button-detail.order-item-detail(data-ng-click="showDetail(order)") Детали &rarr;
+      .order-item-cell.order-item-price
+        strong &#61; {{ order && fullPrice(order.positions) }}р.
+
+.orders(data-ng-show="detail")
+  .orders-detail(data-detail)
+    .orders-detail-nav(data-ng-click="hideDetail()") &larr; Заказы
+    .orders-detail-item
+      .order-detail-id № {{ detail.num }}
+      .order-detail-info
+        .order-detail-phone.order-detail-black-text {{ detail.phone }}
+        .order-detail-address {{ detail.address }}
+        .order-detail-position(data-ng-repeat="position in detail.positions")
+          div
+            strong.order-detail-black-text {{ position.name }}    
+          div
+            span
+              {{ position.count }} порции &#8212; 
+              i.order-detail-black-text {{ position.count * position.price }}р.
+        .order-detail-price
+          strong &#61; 5000p.
+      .order-detail-submit
+        button.button.button-ok(data-ng-show="detail.status == 0", data-ng-click="changeStatus(1)") Завершить
 
 .footer-divider

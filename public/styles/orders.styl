@@ -1,15 +1,33 @@
 @import "./../components/semantic-grid/stylesheets/styl/grid"
 
+@total-width = 100%
+
 .orders
   color #4A4A4A
-  responsive margin, 30px 75px 20px 75px,
-            20px 45px 20px 45px,
-            20px 15px 10px 15px
+
+  .order-item-by-date
+    padding-bottom 10px
+    border-bottom 1px dashed #919191
+
+    &:last-child
+      border-bottom none
+
+    .orders-item-date
+      font-style italic
+      color #fff
+
+      responsive margin, 20px 75px 0px 75px,
+              20px 45px 0px 45px,
+              20px 15px 0px 15px
 
   .orders-item
     border-bottom 1px solid #9b9b9b
     position relative
     clearfix()
+
+    responsive margin, 0px 75px,
+              0px 15px,
+              0px 10px
 
     .order-item-id
       column(1)
@@ -21,17 +39,24 @@
       column(3)
 
     .order-item-positions
-      column(5)
+      column(4)
+
+      .order-item-detail
+        display none
+        width auto
+        color #4a4a4a
 
     .order-item-price
-      column(1)
+      column(2)
 
       .button
-        padding 4px 0px
+        width auto
+        padding 4px 9px
+        margin 15px 0px 0px
   
     .order-item-cell
-      padding 30px 30px 20px 0px
-      margin-left 0px
+      padding 30px 10px 40px 0px
+      margin 0px
 
       responsive word-wrap, break-word,
                 same,
@@ -45,6 +70,7 @@
         border-radius 2px
         position absolute
         bottom -3px
+        left 0px
   
       &:last-child:after
         content ""
@@ -69,5 +95,89 @@
     .order-item-black-text
         color #000
 
+  .orders-detail
+    .orders-detail-nav
+      padding 10px 10px 35px 10px
+      font-style italic
+      text-decoration underline
+      color $a4a4a4
+      cursor pointer
+
+    .orders-detail-item
+      padding 0px 10px
+
+      .order-detail-id
+        column(2)
+
+      .order-detail-info
+        column(7)
+
+        .order-detail-black-text
+          color #000
+
+        .order-detail-phone
+          padding-bottom 10px
+          font-size 18px
+
+        .order-detail-position
+          padding-top 15px
+
+        .order-detail-price
+          padding-top 20px
+          font 24px "PT Serif Caption", serif
+
+      .order-detail-submit
+        column(12)
+        margin-bottom 15px
+
 .order-header-layout-divider
   divider "green-to-taupe"
+
+@media all and (max-width: 640px)
+  .orders
+    .orders-item
+      padding-top 15px
+
+      .order-item-id
+        column(2)
+
+      .order-item-phone
+        column(9)
+    
+      .order-item-address
+        column(2)
+        visibility hidden
+  
+      .order-item-positions
+        column(9)
+
+        .order-item-positions-item
+          padding-bottom 5px
+
+        .order-item-position-count
+          display none
+
+        .order-item-detail
+          display block
+  
+      .order-item-price
+        display none
+
+      .order-item-cell
+        padding 10px 10px 10px 0px
+
+        &:nth-last-child(2):after
+          content ""
+          width 5px
+          height 5px
+          background #9b9b9b
+          border-radius 2px
+          position absolute
+          bottom -3px
+          right 0px
+
+      &:last-child
+        .order-item-cell
+          &:nth-last-child(2):after
+            display none
+

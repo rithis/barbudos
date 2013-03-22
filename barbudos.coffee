@@ -13,7 +13,8 @@ container.set "components", [
   "jquery#~1.9",
   "jquery-ui#~1.9",
   "jquery-file-upload#~7.2",
-  "semantic-grid"
+  "semantic-grid",
+  "select2#~3.3"
 ]
 
 loader = container.get "loader"
@@ -74,6 +75,7 @@ loader.use (container, callback) ->
     positions: [PositionSchema]
 
   OrderSchema = new mongoose.Schema
+    num: type: "number", unique: true, required: true
     cart: type: "string", required: true
     address: type: "string", required: true
     phone: type: "string", required: true
@@ -180,12 +182,16 @@ loader.use (container, callback) ->
       data.positions = cart.positions
       data.cart      = cart.uuid
 
-      order = new Order data
-      order.save (err, order) ->
-        if err
-          return res.send 500
+      Order.count (err, count) ->
+        return res.send 500 if err
+        
+        data.num = count + 1
+        order = new Order data
+        order.save (err, order) ->
+          if err
+            return res.send 500
 
-        res.send order
+          res.send order
 
   getOrderAction = (req, res) ->
     query = req.query

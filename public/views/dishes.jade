@@ -71,9 +71,11 @@ include header
           span(data-editable, data-numerable, dish-autosave="price") {{ dish.price }} 
           span руб.
         p.dishes-item-size.dishes-item-editable
-          span(data-editable, data-numerable, dish-autosave="size") {{ dish.size }}
-          select.dishes-item-size-unit(dish-autosave="sizeUnit")
-            option(data-ng-repeat="sizeUnit in ['гр', 'мл', 'шт']", value="{{ sizeUnit }}", data-ng-selected="sizeUnit == dish.sizeUnit") {{ sizeUnit }}
+          span.dishes-item-size-item
+            span(data-editable, data-numerable, dish-autosave="size") {{ dish.size }}
+          span.dishes-item-size-unit
+            span(dish-autosave="sizeUnit", data-select)
+
 
       .dishes-item.dishes-item-add(data-dishes-item, ng-click="add()")
         p.dishes-item-add-text Добавить блюдо
