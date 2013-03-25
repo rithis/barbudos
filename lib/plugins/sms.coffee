@@ -1,4 +1,4 @@
-# Authentication using tokens.
+# Sms sender.
 #
 #     plugins = require "./lib/plugins"
 #     container.set "sms auth email", "account email"

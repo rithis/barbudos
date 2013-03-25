@@ -10,6 +10,10 @@ container.set "sms24x7 username", nconf.get "sms24x7:username"
 container.set "sms24x7 password", nconf.get "sms24x7:password"
 container.set "sms24x7 callback", nconf.get "sms24x7:callback"
 container.set "admin phones", nconf.get "notification:phones"
+container.set "admin email", nconf.get "notification:email"
+container.set "email service", nconf.get "email:service"
+container.set "email user", nconf.get "email:user"
+container.set "email password", nconf.get "email:password"
 container.set "components", [
   "angular#~1.0",
   "angular-resource#~1.0",
@@ -34,6 +38,7 @@ loader.use symfio.plugins.mongoose
 loader.use symfio.plugins.auth
 loader.use symfio.plugins.uploads
 loader.use plugins.sms
+loader.use plugins.email
 
 loader.use (container, callback) ->
   connection = container.get "connection"
@@ -113,6 +118,7 @@ loader.use (container, callback) ->
   connection = container.get "connection"
   unloader   = container.get "unloader"
   phones     = container.get "admin phones", []
+  email      = container.get "email"
   crud       = container.get "crud"
   app        = container.get "app"
 
@@ -200,6 +206,10 @@ loader.use (container, callback) ->
         order = new Order data
         order.save (err, order) ->
           return res.send 500 if err
+
+          email.send "Новый заказ", """
+            Поступил новый заказ.
+          """
 
           sms = smsFactory.create()
           return res.send order unless sms
