@@ -520,12 +520,12 @@
   , "category": "salads"
   }
 , {
-    "name": "УэвосРанчерос"
+    "name": "Уэвос Ранчерос"
   , "price": 340
   , "description": "тёплый салат со стручковым перцем с копчёными колбасками, цукини, кедровыми орешками и поджаренным яичком"
   , "size": 230
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/huevos-rancheros.png"
   , "buyable": false
   , "category": "salads"
   }
@@ -645,7 +645,7 @@
   , "description": "листья салата «Романо», обжаренныеморе продукты с чесночными гренками, помидорками Черри, заправленные классическим соусом «Цезарь» и присыпанные сыром «пармезан»"
   , "size": 200
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/caesar-seafood.png"
   , "buyable": false
   , "category": "salads"
   }
@@ -1745,7 +1745,7 @@
   , "description": "сочные мясные рёбрышки с соусом «Барбекю»"
   , "size": 300
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/bbq-pork-ribs.png"
   , "buyable": false
   , "category": "hot-dishes"
   }
@@ -1855,7 +1855,7 @@
   , "description": "сочный ягнёнок на косточке с гранатовым соусом, подаётся с овощами обжаренными на гриле"
   , "size": 300
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/rack-of-lamb.png"
   , "buyable": false
   , "category": "hot-dishes"
   }
@@ -2055,7 +2055,7 @@
   , "description": "бекон, сыр «Пармезан, сливки"
   , "size": 120
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/spaghetti-carbonara.png"
   , "buyable": false
   , "category": "hot-dishes"
   }
@@ -2445,7 +2445,7 @@
   , "description": "обжаренные на гриле в чесночном соусе с листьями рукколы"
   , "size": 230
   , "sizeUnit": "гр"
-  , "preview": "/images/no-photo@2x.png"
+  , "preview": "/images/samples/king-prawns.png"
   , "buyable": false
   , "category": "hot-snacks"
   }
