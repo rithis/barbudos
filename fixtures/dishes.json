@@ -1,0 +1,2762 @@
+[
+  {
+    "name": "На воде"
+  , "price": 650
+  , "description": "табак в ассортименте"
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hookah"
+  }
+, {
+    "name": "На молоке"
+  , "price": 800
+  , "description": "табак в ассортименте"
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hookah"
+  }
+, {
+    "name": "На вине"
+  , "price": 950
+  , "description": "табак в ассортименте"
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hookah"
+  }
+, {
+    "name": "Уголь"
+  , "price": 50
+  , "description": ""
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hookah"
+  }
+, {
+    "name": "Сигаретный набор"
+  , "price": 50
+  , "description": "сигареты+спички"
+  , "size": 1
+  , "sizeUnit": "уп"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hookah"
+  }
+, {
+    "name": "Пиво разливное Хейнекен"
+  , "price": 130
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво разливное Хейнекен"
+  , "price": 200
+  , "description": ""
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво разливное Эдельвейс"
+  , "price": 200
+  , "description": "нефильтрованный"
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво разливное Эдельвейс"
+  , "price": 130
+  , "description": "нефильтрованное"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво разливное Барбудос"
+  , "price": 110
+  , "description": ""
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво бутылочное Гиннес Экстра"
+  , "price": 190
+  , "description": ""
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Пиво бутылочное Баклер"
+  , "price": 170
+  , "description": "безалкогольное"
+  , "size": 330
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Мохито"
+  , "price": 200
+  , "description": "мята, сахарный сироп,содовая, лайм"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Мохито клубничный"
+  , "price": 220
+  , "description": "мята, клубничный сироп, содовая, лайм"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Россарио сентрал"
+  , "price": 220
+  , "description": "сок розового грейпфрута, клюквенный сок, спрайт, сироп гренадин"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Ривер плейт"
+  , "price": 220
+  , "description": "сок красного винограда, ванильный сироп, швепс лимон, лимон"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Эспрессо классический"
+  , "price": 110
+  , "description": ""
+  , "size": 60
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Американо классический"
+  , "price": 130
+  , "description": "эспрессо с добавлением воды"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Сливки"
+  , "price": 30
+  , "description": ""
+  , "size": 20
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Молоко"
+  , "price": 30
+  , "description": ""
+  , "size": 20
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Капучино"
+  , "price": 180
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Капучино"
+  , "price": 180
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Мегакапучино"
+  , "price": 210
+  , "description": ""
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Капучино с сиропом"
+  , "price": 190
+  , "description": "сироп на выбор"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Латте классический"
+  , "price": 210
+  , "description": "эспрессо, молоко, молочная пенка"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Латте с сиропом"
+  , "price": 220
+  , "description": "сироп на Ваш выбор"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Айс-Капучино"
+  , "price": 180
+  , "description": "капучино со льдом"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Инглиш Брэкфаст Сент Энрюс"
+  , "price": 200
+  , "description": "Черный ароматный чай золотого цвета, купаж из лучших цейлонских чаев"
+  , "size": 450
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Ганпаудер Жу Ча"
+  , "price": 200
+  , "description": "Зеленый китайский чай со скрученными листьями и сильным вкусом"
+  , "size": 450
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Жасмин Тинг Юань"
+  , "price": 230
+  , "description": "Зеленый чай с насыщенным и ароматным жасминовым вкусом"
+  , "size": 450
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Руби Тьюсдэй"
+  , "price": 230
+  , "description": "Фруктовый свежий вкус ревеня сочетается с нежной сладостью настоящей ванили. Состав: гибискус, яблоко, шиповник, клубника"
+  , "size": 450
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Баварская мята"
+  , "price": 230
+  , "description": "Черный чай с немецкой мятой"
+  , "size": 450
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Лимон"
+  , "price": 40
+  , "description": ""
+  , "size": 20
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Лайм"
+  , "price": 40
+  , "description": ""
+  , "size": 20
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Мед"
+  , "price": 80
+  , "description": ""
+  , "size": 50
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Варенье в ассортименте"
+  , "price": 70
+  , "description": ""
+  , "size": 50
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Ванильный, клубничный, банановый, ананасовый, шоколадный"
+  , "price": 230
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Яблоко, апельсин, морковь"
+  , "price": 210
+  , "description": ""
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Грейпфрут, лимон"
+  , "price": 230
+  , "description": ""
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "В ассортименте"
+  , "price": 70
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Морс"
+  , "price": 80
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Кока-кола"
+  , "price": 100
+  , "description": ""
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Швепс"
+  , "price": 100
+  , "description": ""
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Спрайт"
+  , "price": 100
+  , "description": ""
+  , "size": 5
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Ред Булл"
+  , "price": 190
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Квас"
+  , "price": 70
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Бон Аква"
+  , "price": 90
+  , "description": "с газом"
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Бон Аква"
+  , "price": 90
+  , "description": "без газа"
+  , "size": 500
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Нарзан"
+  , "price": 120
+  , "description": ""
+  , "size": 330
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Перье"
+  , "price": 150
+  , "description": ""
+  , "size": 330
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "drinks"
+  }
+, {
+    "name": "Барбудос"
+  , "price": 320
+  , "description": "нежное куриное филе с яблоком, листьями салата «Айсберг» под горчичным соусом"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Агуакатеканонеро"
+  , "price": 330
+  , "description": "авокадо с креветками и яйцом,заправленные майонезным соусом"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "УэвосРанчерос"
+  , "price": 340
+  , "description": "тёплый салат со стручковым перцем с копчёными колбасками, цукини, кедровыми орешками и поджаренным яичком"
+  , "size": 230
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Мексиканский салат с перчиком «Халопеньо»"
+  , "price": 350
+  , "description": "нежное куриное филе с зелёным и красным стручковым перцем, кукурузой, рисом с добавлением пикантного перчика «Халопеньо»"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Салат с рукколой и креветками"
+  , "price": 380
+  , "description": "салат с листьями рукколы, обжаренными тигровыми креветками, авокадо и помидорками Черри"
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Салат из кактуса"
+  , "price": 390
+  , "description": "маринованный кактус с красным и жёлтым перцем, красным луком, кукурузой, соком лайма, оливковым маслом, кинзой, помидором, авокадо и чипсами «Начос»"
+  , "size": 180
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Салат «По-мексикански»"
+  , "price": 310
+  , "description": "Куриное филе, яйцо, сладкий перец, красный лук, салат, сельдерей, заправленные оливковым маслом и соком лимона"
+  , "size": 230
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Кубинский салат"
+  , "price": 390
+  , "description": "Грейпфрут, ветчина, зеленый горошей, листья салата, каперсы под пикантным соусом"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Теплый салат с говядиной"
+  , "price": 390
+  , "description": "Листья салата, перец Халопеньо, сладкий перец, кукуруза, фасоль красная"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Кубинский фруктовый салат"
+  , "price": 320
+  , "description": "ананасы, бананы, яблоки, виноград листья салата «Айсберг» под сладким соусом"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Из свежих овощей"
+  , "price": 280
+  , "description": "огурцы, помидоры, болгарский перец заправленные оливковым маслом или сметаной на ваш выбор"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Греческий"
+  , "price": 300
+  , "description": "Свежие огурцы, помидоры, болгарский перец, красный лук, сыр «Фета» заправленные оливковым маслом и соком лимона "
+  , "size": 220
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Цезарь"
+  , "price": 330
+  , "description": "листья салата «Романо», обжаренное куриное филе с чесночными гренками, помидорками Черри, заправленные классическим соусом «Цезарь» и присыпанные сыром «пармезан»"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Цезарь с креветками"
+  , "price": 360
+  , "description": "листья салата «Романо», обжаренные тигровые креветки с чесночными гренками, помидорками Черри, заправленные классическим соусом «Цезарь» и присыпанные сыром «пармезан»"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Цезарь с море продуктами"
+  , "price": 360
+  , "description": "листья салата «Романо», обжаренныеморе продукты с чесночными гренками, помидорками Черри, заправленные классическим соусом «Цезарь» и присыпанные сыром «пармезан»"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Капрезе"
+  , "price": 290
+  , "description": "нежный сыр «Моцареллабуффало» с дольками помидора и душистым базиликом заправленные оливковым маслом"
+  , "size": 160
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Руккола с пармской ветчиной и сыром моцарелла"
+  , "price": 500
+  , "description": ""
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "salads"
+  }
+, {
+    "name": "Фасолевый суп"
+  , "price": 220
+  , "description": "ароматный «Кубинский» суп из черной фасоли со специями"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Мексиканский суп"
+  , "price": 230
+  , "description": "с кукурузой"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Суп из бычьих хвостов"
+  , "price": 240
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Деликатесный суп"
+  , "price": 250
+  , "description": "из морепродуктов"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Крем-суп из брокколи"
+  , "price": 210
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Крем-суп из белых грибов"
+  , "price": 210
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Крем-суп «Баварский»"
+  , "price": 230
+  , "description": "с чесночными гренками"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Суп-пюре Томатный"
+  , "price": 230
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Суп куриная лапша"
+  , "price": 180
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Борщ "
+  , "price": 190
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Солянка сборная мясная"
+  , "price": 190
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "soups"
+  }
+, {
+    "name": "Сырное ассорти"
+  , "price": 370
+  , "description": "пикантный Дор Блю, твёрдый сыр Пруссия, нежный Маасдам, копчёный Рамзес"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Мясное ассорти"
+  , "price": 390
+  , "description": "Шпик, Суджук, Бастурма, Говядина сырокопченая"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Рыбное ассорти"
+  , "price": 520
+  , "description": "Сёмга слабосолёная, Палтус х/к, Масляная г/к, Осетрина г/к"
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Соленья"
+  , "price": 310
+  , "description": "капустка квашенная, чеснок красный и белый маринованный, черемша, огурчики солёные, помидоры бочковые"
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Селёдочка"
+  , "price": 300
+  , "description": "селёдочка маринованная с отварным картофелем да с красным лучком"
+  , "size": 220
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Нарезка из свежих овощей"
+  , "price": 320
+  , "description": "огурчики, помидоры, болгарский перчик с зеленью петрушки, кинзы, укропа"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Фисташки"
+  , "price": 210
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Арахис соленый"
+  , "price": 180
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Сыр «Чечел»"
+  , "price": 170
+  , "description": ""
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Кукурузные чипсы «Начес»"
+  , "price": 190
+  , "description": ""
+  , "size": 110
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "cold-starters"
+  }
+, {
+    "name": "Вермут"
+  , "price": 140
+  , "description": "Мартини"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Водка"
+  , "price": 105
+  , "description": "Парламент"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Водка"
+  , "price": 150
+  , "description": "Русский Стандарт"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Водка"
+  , "price": 210
+  , "description": "Абсолют"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Текила"
+  , "price": 230
+  , "description": "Эль Чарро"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Текила"
+  , "price": 230
+  , "description": "Сомбреро Негро"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром"
+  , "price": 260
+  , "description": "Варадеро (Куба)"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром"
+  , "price": 340
+  , "description": "Бакарди Тёмный"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Джин"
+  , "price": 280
+  , "description": "Бифитер"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Джин"
+  , "price": 260
+  , "description": "Гордонс"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Виски"
+  , "price": 290
+  , "description": "Джеймесон"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Виски"
+  , "price": 340
+  , "description": "Джек Дэниелс"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Коньяк"
+  , "price": 250
+  , "description": "Арарат"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Абсент"
+  , "price": 290
+  , "description": "Tunel"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Писко"
+  , "price": 350
+  , "description": "Чили"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ликер"
+  , "price": 270
+  , "description": "Бейлис"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ликер"
+  , "price": 300
+  , "description": "Самбука"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Вино"
+  , "price": 410
+  , "description": "ЛосВаскос кр. сухое, Чили"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Вино"
+  , "price": 410
+  , "description": "ЛосВаскос бел. сухое, Чили"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Игристое вино"
+  , "price": 690
+  , "description": "Шампанское П/С"
+  , "size": 750
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Бакарди коктейль"
+  , "price": 260
+  , "description": "Ром, лимонный сок, гренадин"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Дайкири"
+  , "price": 260
+  , "description": "Ром, сок лайма, сахарный сироп"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Куба либре"
+  , "price": 320
+  , "description": "Ром, Кола"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Мохито"
+  , "price": 320
+  , "description": "Ром, мята, лайм"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Лонг Айленд холодный чай"
+  , "price": 440
+  , "description": "Водка, текила, ром, джин, куантро, лимонный сок, кока-кола"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "ПинаКолада"
+  , "price": 390
+  , "description": "Ром, темный ром, кокосовый сироп, ананасовый сок, сок лайма"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Розовый ром"
+  , "price": 330
+  , "description": "Ром, ананасовый сок, клюквенный морс"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Дайкири с грейпфрутом"
+  , "price": 330
+  , "description": "Ром, сахарный сироп, сок грейпфрута, лайм"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром со спрайтом"
+  , "price": 330
+  , "description": "Ром, спрайт, лайм"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром с апельсином"
+  , "price": 330
+  , "description": "Ром, апельсиновый сок"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Зеленая фея"
+  , "price": 450
+  , "description": "Ром, водка, текила, абсент, блюкурасао, энергетик, лимон"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром клюква"
+  , "price": 330
+  , "description": "Ром, морс, апельсин"
+  , "size": 220
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ром коллинз"
+  , "price": 330
+  , "description": "Ром, сахарный сироп, содовая"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Бостонский чай"
+  , "price": 450
+  , "description": "Ром, текила, водка, джин, апельсиновый ликер, кофейный ликер, кола, лимон"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Маленький цветок"
+  , "price": 300
+  , "description": "Ром, куантро, грейпфрутовый сок, мята"
+  , "size": 80
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Сладкие воспоминания"
+  , "price": 320
+  , "description": "Ром, куантро, вермут"
+  , "size": 80
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Яблочный ром кулер"
+  , "price": 320
+  , "description": "Ром, яблочный сок, спрайт, яблоко"
+  , "size": 240
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Белый кубинец"
+  , "price": 350
+  , "description": "Ром, сахарный сироп, ванильный сироп, квас, сливки"
+  , "size": 180
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Маргарита"
+  , "price": 310
+  , "description": "Текила, куантро, сок лайма"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Текила Санрайз"
+  , "price": 320
+  , "description": "Текила, апельсиновый сок, гренадин"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Домашняя маргарита"
+  , "price": 330
+  , "description": "Текила, куантро, лайм"
+  , "size": 160
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Текила Мадрас"
+  , "price": 320
+  , "description": "Текила, апельсиновый сок,морс"
+  , "size": 170
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Галилео"
+  , "price": 290
+  , "description": "Текила, куантро, кампари, вермут"
+  , "size": 80
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Текила Бум"
+  , "price": 270
+  , "description": "Текила, спрайс"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Драй мартини"
+  , "price": 320
+  , "description": "Джин, сухой вермут"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Негрони"
+  , "price": 280
+  , "description": "Джин, Кампари, сладкий вермут"
+  , "size": 100
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Джин Физ"
+  , "price": 300
+  , "description": "Джин, лимонный сок, сироп, содовая"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Александр"
+  , "price": 310
+  , "description": "Джин, калуа, сливки"
+  , "size": 90
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Бифитер"
+  , "price": 350
+  , "description": "Джин, сахарный сироп, апельсиновый и грейпфрутовый сок"
+  , "size": 140
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Джин-тоник"
+  , "price": 320
+  , "description": "Джин, тоник"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Абсент и ананас"
+  , "price": 380
+  , "description": "абсент, ананасовый сок"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Трава у моря"
+  , "price": 310
+  , "description": "Абсент, водка, сахарный сироп, содовая"
+  , "size": 170
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Кровавая Мери"
+  , "price": 280
+  , "description": "Водка, томатный сок, лимонный сок, соус Тобаско"
+  , "size": 160
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Отвертка"
+  , "price": 220
+  , "description": "Водка, апельсиновый сок"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Космополитан"
+  , "price": 320
+  , "description": "Водка, куантро, сок лайма, клюквенный сок"
+  , "size": 100
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Голубая лагуна"
+  , "price": 290
+  , "description": "водка, спрайт, ликер BlueCurasao"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Черный Русский"
+  , "price": 280
+  , "description": "Водка, кофейный ликер Калуа"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Белый Русский"
+  , "price": 270
+  , "description": "Водка, кофейный ликер Калуа,сливки"
+  , "size": 70
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "ЛеМан"
+  , "price": 320
+  , "description": "Куантро, водка, содовая"
+  , "size": 200
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Эспрессо мартини"
+  , "price": 320
+  , "description": "Водка, калуа, ванильный сироп, молотый кофе"
+  , "size": 80
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Ментоловый джулеп"
+  , "price": 330
+  , "description": "Мята, виски, сироп, тоник"
+  , "size": 250
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Зимняя мята"
+  , "price": 260
+  , "description": "Пиво, сироп Мохито, блюкурасао"
+  , "size": 100
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Мятное пиво"
+  , "price": 310
+  , "description": "Пиво, сироп Мохито, мята и лайм"
+  , "size": 160
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Гарибальди"
+  , "price": 250
+  , "description": "Кампари, апельсиновый сок"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Милан"
+  , "price": 250
+  , "description": "Кампари, белое вино, содовая"
+  , "size": 150
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "В-52"
+  , "price": 320
+  , "description": "Калуа, бейлиз, куантро"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "В-53"
+  , "price": 320
+  , "description": "Калуа, бейлиз, абсент"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Огненный ламборджини"
+  , "price": 300
+  , "description": "Калуа, самбука"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Серебреная пуля"
+  , "price": 300
+  , "description": "Текила, калуа, лимон"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Амиго"
+  , "price": 300
+  , "description": "Текила, кофейный ликер, сливки"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Аравика"
+  , "price": 300
+  , "description": "Текила, кофейный ликер, гренадин, лимон"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Облака"
+  , "price": 320
+  , "description": "Абсент, текила, самбука, Блюкурасао"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Форсаж"
+  , "price": 320
+  , "description": "Текила, самбука, куантро, табаско"
+  , "size": 60
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Свирепый бык"
+  , "price": 320
+  , "description": "Текила, самбука, калуа"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Таракан"
+  , "price": 320
+  , "description": "Абсент, самбука, калуа"
+  , "size": 50
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "alcohol"
+  }
+, {
+    "name": "Фахитас с курицей"
+  , "price": 330
+  , "description": "куриное филе с стручковой фасолью и болгарским перцем, томатнаясальса и перчик «Халопеньо» подаётся с лепёшками тортилья"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Фахитас с овощами"
+  , "price": 310
+  , "description": "стручковая фасоль и болгарский перец, цукини, баклажаны, томатнаясальса и перчик «Халопеньо» подаётся с лепёшками тортилья"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Фахитас со свининой"
+  , "price": 340
+  , "description": "свинина с стручковой фасолью и болгарским перцем, томатнаясальса и перчик «Халопеньо» подаётся с лепёшками тортилья"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Фахитас с говядиной"
+  , "price": 350
+  , "description": "говядина с стручковой фасолью и болгарским перцем, томатнаясальса и перчик «Халопеньо» подаётся с лепёшками тортилья"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Чалупас"
+  , "price": 320
+  , "description": "Лепёшка тортилья с мясным красным соусом, подаётся с соусом Тако"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Чалупас"
+  , "price": 320
+  , "description": "Лепёшка тортилья с мясным красным соусом, подаётся с соусом Тако"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Буррито"
+  , "price": 330
+  , "description": "фасоль с томатами, сыром Чедер и соусом Такозавёрнутые в лепёшку тортилью"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Буррито со свининой"
+  , "price": 340
+  , "description": "свиная мякоть с фасолью и томатами, сыром Чедер, соусом Тако, завёрнутые в лепёшку тортилью"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Чимичангас"
+  , "price": 360
+  , "description": "фасоль с мясным красным соусом, сыр Чедер, завёрнутые в лепёшку тортилью, подаётся с соусом Гуакамоле"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Гамбургер по-мексикански"
+  , "price": 290
+  , "description": "особый гамбургер с добавлением фасоли в сочную мясную котлету, подаётся с Фри"
+  , "size": 380
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Свиные ребрышки по-ацтекски"
+  , "price": 480
+  , "description": "сочные мясные рёбрышки с сливочным соусом Чили"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Свиные ребрышки"
+  , "price": 470
+  , "description": "сочные мясные рёбрышки с соусом «Барбекю»"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Бифштекс"
+  , "price": 480
+  , "description": "нежная телятина с соусом Тако и шампиньонами обжаренными в масле"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Свиная отбивная «По-кубински»"
+  , "price": 480
+  , "description": "Стейк из свинины, имбирь, чеснок, орех, банан жаренный, подается с красной фасолью"
+  , "size": 260
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Рис по-кубински"
+  , "price": 260
+  , "description": "рис обжаренный с беконом, изюмом, арахисом, яйцом и мякотью апельсина"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Рис по-мексикански"
+  , "price": 230
+  , "description": "рис обжаренный с болгарским перцем, кукурузой и стручковой фасолью"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пельмешки"
+  , "price": 300
+  , "description": "ручной лепки в горшочке со сметаной"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пельмешки"
+  , "price": 300
+  , "description": "ручной лепки, обжаренные в масле"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Сэндвич"
+  , "price": 300
+  , "description": "классический сэндвич с курицей, огурцом, помидором, листья салата «ЛолоРоссо», подаётся с картофелем ФРИ"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Цыплёнок табака"
+  , "price": 490
+  , "description": ""
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Телятина"
+  , "price": 490
+  , "description": "нежная телятина приготовленная в сливочно-грибном соусе, подаётся с картофельным блинчиком"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Медальоны"
+  , "price": 650
+  , "description": "медальоны из говядины, подаются с грибами обжаренными в сливочном соусе"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Каре ягненка"
+  , "price": 790
+  , "description": "сочный ягнёнок на косточке с гранатовым соусом, подаётся с овощами обжаренными на гриле"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Баранина"
+  , "price": 600
+  , "description": "жаренная баранина подаётся на маринованном красном луке"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Отбивная из свинины"
+  , "price": 410
+  , "description": "жареная свинина на косточке, подается с картофель фри"
+  , "size": 350
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Сэндвич с тунцом"
+  , "price": 300
+  , "description": "классический сэндвич с Тунцом, огурцом, помидором, листья салата «ЛолоРоссо», подаётся с картофелем ФРИ"
+  , "size": 280
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Форель речная"
+  , "price": 430
+  , "description": "целиковая форель приготовленнаяна гриле, подаётся с рисовой лапшой обжаренной в соевом соусе"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Сёмга"
+  , "price": 500
+  , "description": "стейк из семги приготовленный на гриле и приправленный соусом «Бешамель»"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Лосось на гриле с рисом"
+  , "price": 530
+  , "description": ""
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Форель по-мексикански"
+  , "price": 460
+  , "description": "целиковая форель обжаривается с беконом и кедровыми орехами, подаётся с зелёным горошком"
+  , "size": 300
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 30
+  , "description": "Аджика"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 30
+  , "description": "Соевый соус"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 30
+  , "description": "Сметанный соус"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 60
+  , "description": "«Тако»"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 40
+  , "description": "«Ткемали»"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 20
+  , "description": "Кетчуп"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 20
+  , "description": "Горчица"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Соус"
+  , "price": 60
+  , "description": "Гуакамоле"
+  , "size": 80
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 70
+  , "description": "Спагетти"
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 70
+  , "description": "Пенне"
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 120
+  , "description": "Феттучини"
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста «Помодоро»"
+  , "price": 230
+  , "description": "соус «Помодоро» и сыр «Пармезан»"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста «Карбонара»"
+  , "price": 280
+  , "description": "бекон, сыр «Пармезан, сливки"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 270
+  , "description": "С грибами в сливочном соусе"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 290
+  , "description": "С морепродуктами и сыром «Пармезан»"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 290
+  , "description": "С белыми грибами в сливочном соусе"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Паста"
+  , "price": 290
+  , "description": "С тигровыми креветками"
+  , "size": 120
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Маргарита»"
+  , "price": 500
+  , "description": "Классическая пицца с сыром «Моцарелла» и фирменным томатным соусом"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Барбекю Куриная»"
+  , "price": 610
+  , "description": "Куриное филе с красным лучком, шампиньонами, зеленым перцем и сыром «Моцарелла»"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца с беконом"
+  , "price": 590
+  , "description": "сочный бекон с красный лучком, шампиньонами и сыром «Моцарелла»"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Четыре сыра»"
+  , "price": 570
+  , "description": "«Дорблю», «Пармезан», «Моцарелла», «Рамзес»"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Мехико»"
+  , "price": 550
+  , "description": "копчёные колбаски Чорисо с фирменным соусом Тако и репчатым лучком"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Средиземноморская»"
+  , "price": 650
+  , "description": "море продукты с соусом и сыром «Моцарелла»"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Гавайская»"
+  , "price": 740
+  , "description": "с креветками"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Чили»"
+  , "price": 580
+  , "description": "с халапеньо"
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Пепперони»"
+  , "price": 520
+  , "description": ""
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Мясная»"
+  , "price": 640
+  , "description": ""
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Вегетарианская»"
+  , "price": 510
+  , "description": ""
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Цезарь»"
+  , "price": 710
+  , "description": ""
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Пицца «Ассорти»"
+  , "price": 530
+  , "description": ""
+  , "size": 40
+  , "sizeUnit": "см"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Картофельное пюре"
+  , "price": 80
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Картофель отварной с укропом"
+  , "price": 80
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Картофель фри с кетчупом"
+  , "price": 190
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Овощи на гриле"
+  , "price": 160
+  , "description": ""
+  , "size": 200
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Брокколи"
+  , "price": 140
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Рис"
+  , "price": 90
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Хлеб"
+  , "price": 30
+  , "description": "пшеничный, ржаной"
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Тортилья"
+  , "price": 40
+  , "description": ""
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Лепешки с кунжутом"
+  , "price": 50
+  , "description": ""
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-dishes"
+  }
+, {
+    "name": "Крылышки куриные"
+  , "price": 360
+  , "description": "зажаренные в масле под соусом «Барбекю»"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Свиные ушки"
+  , "price": 470
+  , "description": "приготовленные с соусом «Барбекю» подаются с чесночными гренками и маринованным красным лучком"
+  , "size": 370
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Жульен с грибами"
+  , "price": 210
+  , "description": ""
+  , "size": 140
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Жульен с курицей"
+  , "price": 230
+  , "description": ""
+  , "size": 140
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Жульен с креветками"
+  , "price": 260
+  , "description": ""
+  , "size": 130
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Гренки"
+  , "price": 160
+  , "description": "ржаные в чесночном соусе"
+  , "size": 270
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кольца Кальмара"
+  , "price": 350
+  , "description": "в кляре"
+  , "size": 310
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Луковые кольца"
+  , "price": 340
+  , "description": "в кляре"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Тигровые Креветки"
+  , "price": 440
+  , "description": "в кляре"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Ассорти из закусок в кляре"
+  , "price": 1400
+  , "description": "кальмары, креветки, луковые кольца и Халопеньо"
+  , "size": 1000
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Отборные креветки"
+  , "price": 490
+  , "description": "отварные"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Тигровые креветки"
+  , "price": 470
+  , "description": "в соусе «Помодоро»"
+  , "size": 230
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Королевские креветки"
+  , "price": 580
+  , "description": "обжаренные на гриле в чесночном соусе с листьями рукколы"
+  , "size": 230
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Креветки в ТЕКИЛЕ"
+  , "price": 470
+  , "description": "тигровые креветки обжаренные в текиле, подаются с микс салатом"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Крылышки ПО-АЦТЕКСКИ"
+  , "price": 400
+  , "description": ""
+  , "size": 260
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья с курицей"
+  , "price": 360
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья с грибами"
+  , "price": 320
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья с овощами"
+  , "price": 320
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья с креветками"
+  , "price": 450
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья со свининой"
+  , "price": 380
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Кесадилья с сыром"
+  , "price": 340
+  , "description": ""
+  , "size": 400
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Мидии запеченные в пиве под сливочным соусом"
+  , "price": 680
+  , "description": "Мидии, чеснок, орегано, соус Табаско, сухое вино, зелень"
+  , "size": 450
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Колбаски «Нюрнбергские»"
+  , "price": 360
+  , "description": "говяжьи на сковородочке с обжаренной квашеной капустой"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Колбаски свиные"
+  , "price": 400
+  , "description": "подаются на сковородочке с картошечкой"
+  , "size": 330
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Ассорти из жаренных колбасок"
+  , "price": 1200
+  , "description": "4 вида, большая порция"
+  , "size": 900
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Картошечка по-деревенски на сковородочке"
+  , "price": 280
+  , "description": "картошечка с грибочками и лучком"
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Омлет"
+  , "price": 210
+  , "description": "из двух яиц"
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Омлет"
+  , "price": 260
+  , "description": "из двух яиц с ветчиной и сыром"
+  , "size": 210
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Омлет"
+  , "price": 230
+  , "description": "из двух яиц с помидорами и сыром"
+  , "size": 210
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Омлет"
+  , "price": 240
+  , "description": "из двух яиц с шампиньонами и грибным соусом"
+  , "size": 210
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Баклажаны пармиджано"
+  , "price": 420
+  , "description": ""
+  , "size": 250
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "hot-snacks"
+  }
+, {
+    "name": "Чиз-кейк «Нью-Йорк»"
+  , "price": 280
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Чиз-кейк «Карамельный»"
+  , "price": 290
+  , "description": ""
+  , "size": 150
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Торт «Тирамису»"
+  , "price": 230
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Торт «Паризьен»"
+  , "price": 210
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Торт «Шоколадный»"
+  , "price": 230
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Торт Медовый"
+  , "price": 190
+  , "description": ""
+  , "size": 100
+  , "sizeUnit": "гр"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Блины"
+  , "price": 150
+  , "description": ""
+  , "size": 3
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Блины"
+  , "price": 190
+  , "description": "Со сметаной"
+  , "size": 3
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Блины"
+  , "price": 190
+  , "description": "С медом"
+  , "size": 3
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Блины"
+  , "price": 190
+  , "description": "С вареньем"
+  , "size": 3
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Блины"
+  , "price": 320
+  , "description": "С семгой"
+  , "size": 3
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Мороженое"
+  , "price": 80
+  , "description": ""
+  , "size": 1
+  , "sizeUnit": "шт"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+, {
+    "name": "Сироп на выбор"
+  , "price": 30
+  , "description": ""
+  , "size": 20
+  , "sizeUnit": "мл"
+  , "preview": "/images/no-photo@2x.png"
+  , "buyable": false
+  , "category": "desserts"
+  }
+]

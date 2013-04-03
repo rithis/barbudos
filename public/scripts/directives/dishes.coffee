@@ -156,7 +156,7 @@ dishesDirective.directive "select", ->
   restrict: "A"
   link: (scope, element, attrs) ->
     data = []
-    ["гр", "мл", "шт"].forEach (item) ->
+    ["гр", "мл", "шт", "уп", "см"].forEach (item) ->
       data.push id: item, text: item
     element.select2
       minimumResultsForSearch: -1

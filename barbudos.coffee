@@ -31,26 +31,27 @@ loader.use (container, callback) ->
   mongoose = container.get "mongoose"
 
   CategorySchema = new mongoose.Schema
+    _id: type: String
     name: type: "string", required: true
 
   DishSchema = new mongoose.Schema
     name: type: "string", required: true
     price: type: "number", required: true
-    description: type: "string", required: true
+    description: type: "string"
     size: type: "number", required: true
     sizeUnit:
       type: "string"
       required: true
       default: "гр"
       validate: (value) ->
-        /гр|мл|шт/i.test value
+        /гр|мл|шт|уп|см/i.test value
     preview:
       type: "string",
       required: true,
       default: "/images/no-photo@2x.png"
     buyable: type: Boolean, default: true
     category:
-      type: mongoose.Schema.Types.ObjectId
+      type: String
       ref: "CategorySchema"
       required: true
 
