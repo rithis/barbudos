@@ -12,7 +12,10 @@ container.set "sms24x7 callback", nconf.get "sms24x7:callback"
 container.set "admin phones", nconf.get "notification:phones"
 container.set "admin email", nconf.get "notification:email"
 container.set "email service", nconf.get "email:service"
+container.set "email host", nconf.get "email:host"
+container.set "email port", nconf.get "email:port"
 container.set "email user", nconf.get "email:user"
+container.set "email secure connection", nconf.get "email:secureConnection"
 container.set "email password", nconf.get "email:password"
 container.set "components", [
   "angular#~1.0",
