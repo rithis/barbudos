@@ -74,7 +74,7 @@ loader.use (container, callback) ->
       required: true,
       default: '/images/no-photo@2x.png'
     category:
-      type: mongoose.Schema.Types.ObjectId
+      type: String
       ref: 'CategorySchema'
       required: true
     count: type: 'number', required: true
