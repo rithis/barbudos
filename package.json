@@ -9,6 +9,7 @@
   "dependencies": {
     "coffee-script": "~1.6",
     "symfio": "~0.4",
+    "async": "~0.2",
     "node-uuid": "~1.4",
     "superagent": "~0.12",
     "lodash": "~1.0",
@@ -21,7 +22,6 @@
     "grunt-simple-mocha": "~0.3",
     "grunt-coffeelint": "~0.0",
     "grunt-docco": "~0.2",
-    "async": "~0.2",
     "supertest": "~0.5",
     "zombie": "~1.4",
     "should": "~1.2"
